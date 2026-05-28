@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shuxratov Behruz — Monitoring &amp; DBA</title>
+  <meta name="description" content="Shuxratov Behruz — Linux, Oracle Database, monitoring tizimlari va infratuzilma avtomatlashtirish bo'yicha IT mutaxassis." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://cdn.simpleicons.org" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- animated Orion starfield -->
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <!-- ====== NAV ====== -->
+  <header id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="brand">
+        <span class="brand-mark"></span>
+        <span class="brand-name">Shuxratov Behruz</span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#about" data-i18n="nav_about">Men haqimda</a>
+        <a href="#experience" data-i18n="nav_experience">Tajriba</a>
+        <a href="#education" data-i18n="nav_education">Ta'lim</a>
+        <a href="#skills" data-i18n="nav_skills">Ko'nikmalar</a>
+        <a href="#systems" data-i18n="nav_projects">Loyihalar</a>
+        <a href="#certificates" data-i18n="nav_certificates">Sertifikatlar</a>
+        <a href="#contact" data-i18n="nav_contact">Aloqa</a>
+      </nav>
+
+      <div class="nav-right">
+        <div class="lang-switch" id="lang-switch">
+          <button data-lang="uz" class="active">UZ</button>
+          <button data-lang="ru">RU</button>
+          <button data-lang="en">EN</button>
+        </div>
+        <button class="nav-burger" id="nav-burger" aria-label="menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====== HERO ====== -->
+    <section id="hero" class="hero">
+      <div class="hero-inner reveal">
+        <div class="hero-badge" data-i18n="hero_badge">Monitoring muhandisi</div>
+        <h1 class="hero-name">Shuxratov Behruz</h1>
+        <p class="hero-role" data-i18n="hero_role">Linux · Oracle Database · Monitoring · Avtomatlashtirish</p>
+        <p class="hero-sub" data-i18n="hero_sub">Monitoring tizimlarini quraman, Oracle bazalarga xizmat ko'rsataman va infratuzilmani avtomatlashtiraman.</p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary" data-i18n="hero_contact_btn">Bog'lanish</a>
+          <a href="resume.html" class="btn btn-ghost" data-i18n="hero_resume_btn">Rezyume (PDF)</a>
+          <a href="#systems" class="btn btn-ghost" data-i18n="hero_projects_btn">Loyihalarim</a>
+        </div>
+
+        <div class="hero-meta">
+          <a class="chip" href="tel:+998956628226">
+            <svg viewBox="0 0 24 24" class="chip-ic"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2z"/></svg>
+            +998 95 662 82 26
+          </a>
+          <a class="chip" href="https://t.me/Shuxratov_Behruz" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" class="chip-ic"><path fill="currentColor" d="M21.9 4.3 18.7 19c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.4 13 1.7 11.5c-1-.3-1-1 .2-1.5L20.6 2.8c.8-.3 1.5.2 1.3 1.5z"/></svg>
+            @Shuxratov_Behruz
+          </a>
+          <a class="chip" href="https://www.linkedin.com/in/shuxratov-behruz-2323233a6/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" class="chip-ic"><path fill="currentColor" d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.3 8.5h3.3V21H3.3V8.5zM9.4 8.5h3.16v1.7h.05c.44-.83 1.5-1.7 3.1-1.7 3.3 0 3.9 2.17 3.9 5V21h-3.3v-5.8c0-1.4 0-3.2-1.95-3.2-1.96 0-2.26 1.5-2.26 3.1V21H9.4V8.5z"/></svg>
+            LinkedIn
+          </a>
+          <span class="chip chip-stat">
+            <svg viewBox="0 0 24 24" class="chip-ic"><path fill="currentColor" d="M12 5C5.6 5 1 12 1 12s4.6 7 11 7 11-7 11-7-4.6-7-11-7zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-6a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>
+            <span id="view-count" class="view-count">…</span>
+            <span data-i18n="views_label" class="view-label">tashrif</span>
+          </span>
+        </div>
+      </div>
+      <div class="scroll-hint" aria-hidden="true"><span></span></div>
+    </section>
+
+    <!-- ====== ABOUT ====== -->
+    <section id="about" class="section">
+      <div class="section-head reveal">
+        <span class="kicker" data-i18n="about_kicker">01 — Profil</span>
+        <h2 data-i18n="about_title">Men haqimda</h2>
+      </div>
+      <p class="about-body reveal" data-i18n="about_body"></p>
+      <blockquote class="note reveal" id="note-block">
+        <span class="note-label" data-i18n="note_label">Shaxsiy xabar</span>
+        <p id="note-text"></p>
+      </blockquote>
+    </section>
+
+    <!-- ====== EXPERIENCE ====== -->
+    <section id="experience" class="section">
+      <div class="section-head reveal">
+        <span class="kicker" data-i18n="exp_kicker">02 — Karyera</span>
+        <h2 data-i18n="exp_title">Ish tajribasi</h2>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <!-- ====== EDUCATION ====== -->
+    <section id="education" class="section">
+      <div class="section-head reveal">
+        <span class="kicker" data-i18n="edu_kicker">03 — Ta'lim</span>
+        <h2 data-i18n="edu_title">Ta'lim</h2>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-icon">
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zM5 13.2V17c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.8l-7 3.8-7-3.8z"/></svg>
+        </div>
+        <div class="edu-body">
+          <div class="edu-period" data-i18n="edu_period">2022 — 2026</div>
+          <h3 class="edu-uni" data-i18n="edu_uni">Toshkent davlat iqtisodiyot universiteti</h3>
+          <div class="edu-status" data-i18n="edu_status">4-kurs talabasi · 2026-yilda bitiradi</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SKILLS ====== -->
+    <section id="skills" class="section">
+      <div class="section-head reveal">
+        <span class="kicker" data-i18n="skills_kicker">04 — Stack</span>
+        <h2 data-i18n="skills_title">Texnik ko'nikmalar</h2>
+      </div>
+      <div class="skills-wrap" id="skills-wrap"></div>
+    </section>
+
+    <!-- ====== CAPABILITIES ====== -->
+    <section id="can" class="section">
+      <div class="section-head reveal">
+        <span class="kicker" data-i18n="can_kicker">05 — Nima qila olaman</span>
+        <h2 data-i18n="can_title">Imkoniyatlarim</h2>
+        <p class="section-sub" data-i18n="can_sub">Quyida amalda qila oladigan ishlarimdan namunalar.</p>
+      </div>
+      <div class="cards" id="cap-cards"></div>
+    </section>
+
+    <!-- ====== PROJECTS ====== -->
+    <section id="systems" class="section">
+      <div class="section-head reveal">
+        <span class="kicker" data-i18n="systems_kicker">06 — Loyihalar</span>
+        <h2 data-i18n="systems_title">Loyihalarim</h2>
+      </div>
+
+      <div class="system-feature reveal">
+        <div class="system-art">
+          <img src="assets/orion-db-pro.svg" alt="OrionDB Pro dashboard" loading="lazy" />
+        </div>
+        <div class="system-info">
+          <div class="system-title">
+            <span class="system-logo"></span>
+            <h3>OrionDB <span class="accent">Pro</span></h3>
+          </div>
+          <p class="system-tag" data-i18n="odp_tag">Oracle bazalarni real vaqtda kuzatuvchi monitoring dashboard.</p>
+          <p class="system-desc" data-i18n="odp_desc"></p>
+          <ul class="system-feats" id="odp-feats"></ul>
+          <p class="system-note" data-i18n="odp_note"></p>
+        </div>
+      </div>
+
+      <!-- admin-added projects -->
+      <div class="cards" id="extra-projects"></div>
+    </section>
+
+    <!-- ====== CERTIFICATES ====== -->
+    <section id="certificates" class="section">
+      <div class="section-head reveal">
+        <span class="kicker" data-i18n="cert_kicker">07 — Sertifikatlar</span>
+        <h2 data-i18n="cert_title">Sertifikatlar</h2>
+        <p class="section-sub" data-i18n="cert_sub">Tugatilgan kurslar va sertifikatlar.</p>
+      </div>
+      <div class="cert-grid" id="cert-grid"></div>
+    </section>
+
+    <!-- ====== GOALS ====== -->
+    <section id="goals" class="section">
+      <div class="section-head reveal">
+        <span class="kicker" data-i18n="goals_kicker">08 — Yo'nalish</span>
+        <h2 data-i18n="goals_title">Maqsadlarim</h2>
+      </div>
+      <div class="goals-grid" id="goals-grid"></div>
+    </section>
+
+    <!-- ====== CONTACT ====== -->
+    <section id="contact" class="section section-contact">
+      <div class="contact-card reveal">
+        <h2 data-i18n="contact_title">Bog'lanish</h2>
+        <p data-i18n="contact_sub">Hamkorlik yoki savollar uchun bemalol yozing.</p>
+        <div class="contact-links">
+          <a class="contact-link" href="tel:+998956628226">
+            <svg viewBox="0 0 24 24" class="chip-ic"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2z"/></svg>
+            <span>+998 95 662 82 26</span>
+          </a>
+          <a class="contact-link" href="https://t.me/Shuxratov_Behruz" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" class="chip-ic"><path fill="currentColor" d="M21.9 4.3 18.7 19c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.4 13 1.7 11.5c-1-.3-1-1 .2-1.5L20.6 2.8c.8-.3 1.5.2 1.3 1.5z"/></svg>
+            <span>@Shuxratov_Behruz</span>
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/shuxratov-behruz-2323233a6/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" class="chip-ic"><path fill="currentColor" d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.3 8.5h3.3V21H3.3V8.5zM9.4 8.5h3.16v1.7h.05c.44-.83 1.5-1.7 3.1-1.7 3.3 0 3.9 2.17 3.9 5V21h-3.3v-5.8c0-1.4 0-3.2-1.95-3.2-1.96 0-2.26 1.5-2.26 3.1V21H9.4V8.5z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Shuxratov Behruz</span>
+    <span class="footer-dot">·</span>
+    <span data-i18n="footer_made">Orion yulduz turkumi ilhomida</span>
+    <button class="admin-trigger" id="admin-open" title="Admin" aria-label="Admin">
+      <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+    </button>
+  </footer>
+
+  <!-- ====== ADMIN MODAL ====== -->
+  <div class="admin-overlay" id="admin-overlay" hidden>
+    <div class="admin-modal" role="dialog" aria-modal="true">
+      <button class="admin-close" id="admin-close" aria-label="close">&times;</button>
+
+      <div class="admin-login" id="admin-login">
+        <h3>Admin panel</h3>
+        <p class="admin-hint">Kontent qo'shish uchun parolni kiriting.</p>
+        <input type="password" id="admin-pass" placeholder="Parol" autocomplete="current-password" />
+        <button class="btn btn-primary" id="admin-login-btn">Kirish</button>
+        <p class="admin-err" id="admin-login-err"></p>
+      </div>
+
+      <div class="admin-panel" id="admin-panel" hidden>
+        <div class="admin-tabs">
+          <button data-tab="message" class="active">Xabar</button>
+          <button data-tab="projects">Loyihalar</button>
+          <button data-tab="certs">Sertifikatlar</button>
+          <button data-tab="data">Ma'lumot</button>
+        </div>
+
+        <!-- message -->
+        <div class="admin-tab" data-tab="message">
+          <label class="admin-label">Shaxsiy xabar (ishingiz haqida qisqacha)</label>
+          <textarea id="adm-message" rows="5" placeholder="O'zingiz haqingizda qisqa matn yozing..."></textarea>
+          <button class="btn btn-primary" id="adm-message-save">Saqlash</button>
+          <span class="admin-saved" id="adm-message-saved" hidden>Saqlandi ✓</span>
+        </div>
+
+        <!-- projects -->
+        <div class="admin-tab" data-tab="projects" hidden>
+          <div class="admin-list" id="adm-proj-list"></div>
+          <div class="admin-form">
+            <label class="admin-label">Yangi loyiha qo'shish</label>
+            <input type="text" id="adm-proj-title" placeholder="Loyiha nomi" />
+            <textarea id="adm-proj-desc" rows="3" placeholder="Qisqacha tavsif"></textarea>
+            <input type="text" id="adm-proj-tags" placeholder="Teglar (vergul bilan): Docker, Bash" />
+            <input type="file" id="adm-proj-img" accept="image/*" />
+            <button class="btn btn-primary" id="adm-proj-add">Qo'shish</button>
+          </div>
+        </div>
+
+        <!-- certificates -->
+        <div class="admin-tab" data-tab="certs" hidden>
+          <div class="admin-list" id="adm-cert-list"></div>
+          <div class="admin-form">
+            <label class="admin-label">Yangi sertifikat qo'shish</label>
+            <input type="text" id="adm-cert-title" placeholder="Sertifikat nomi (masalan: DevOps)" />
+            <input type="text" id="adm-cert-issuer" placeholder="Beruvchi (masalan: Uacademy)" />
+            <input type="text" id="adm-cert-date" placeholder="Sana (masalan: 30.10.2024)" />
+            <input type="file" id="adm-cert-img" accept="image/*" />
+            <button class="btn btn-primary" id="adm-cert-add">Qo'shish</button>
+            <p class="admin-hint">Rasm avtomatik kichraytiriladi va brauzeringizda saqlanadi.</p>
+          </div>
+        </div>
+
+        <!-- data -->
+        <div class="admin-tab" data-tab="data" hidden>
+          <p class="admin-hint">Qo'shgan ma'lumotlaringiz shu brauzerda saqlanadi. Boshqa qurilmaga ko'chirish uchun eksport qiling.</p>
+          <div class="admin-row">
+            <button class="btn btn-ghost" id="adm-export">Eksport (JSON)</button>
+            <label class="btn btn-ghost">Import<input type="file" id="adm-import" accept="application/json" hidden /></label>
+            <button class="btn btn-danger" id="adm-clear">Hammasini tozalash</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/stars.js"></script>
+  <script src="js/counter.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="dkBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0c1726"/>
+      <stop offset="1" stop-color="#081019"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="640" height="400" rx="14" fill="url(#dkBg)" stroke="#173049" stroke-width="1.5"/>
+
+  <!-- header -->
+  <rect x="0" y="0" width="640" height="44" rx="14" fill="#0f2236"/>
+  <rect x="0" y="30" width="640" height="14" fill="#0f2236"/>
+  <!-- docker whale mark -->
+  <g transform="translate(18,14)">
+    <rect x="0" y="6" width="6" height="6" fill="#2496ed"/><rect x="8" y="6" width="6" height="6" fill="#2496ed"/>
+    <rect x="16" y="6" width="6" height="6" fill="#2496ed"/><rect x="8" y="-2" width="6" height="6" fill="#2496ed"/>
+    <path d="M-2 14 h30 a8 8 0 0 1 -10 8 h-12 a8 8 0 0 1 -8 -8 z" fill="#2496ed"/>
+  </g>
+  <text x="54" y="28" fill="#dbe7f2" font-size="14" font-weight="700">Portainer · Stacks</text>
+  <rect x="540" y="12" width="84" height="20" rx="5" fill="#15324d"/>
+  <circle cx="552" cy="22" r="3.5" fill="#34d399"/>
+  <text x="562" y="26" fill="#9fb8ce" font-size="10">running</text>
+
+  <!-- stack 1 -->
+  <text x="22" y="68" fill="#7d97b0" font-size="11" font-weight="600">stack: orion-monitoring</text>
+  <g>
+    <rect x="22" y="78" width="184" height="84" rx="9" fill="#0f2034" stroke="#1d3a57" stroke-width="1.3"/>
+    <circle cx="40" cy="98" r="5" fill="#34d399"/>
+    <text x="52" y="102" fill="#e3edf6" font-size="11" font-weight="600">backend</text>
+    <text x="36" y="124" fill="#6f87a0" font-size="9">node:20 · :8080</text>
+    <rect x="36" y="134" width="156" height="6" rx="3" fill="#142a40"/>
+    <rect x="36" y="134" width="60" height="6" rx="3" fill="#2496ed"/>
+    <text x="36" y="156" fill="#5f7790" font-size="8.5">cpu 12% · mem 180MB</text>
+  </g>
+  <g>
+    <rect x="218" y="78" width="184" height="84" rx="9" fill="#0f2034" stroke="#1d3a57" stroke-width="1.3"/>
+    <circle cx="236" cy="98" r="5" fill="#34d399"/>
+    <text x="248" y="102" fill="#e3edf6" font-size="11" font-weight="600">frontend</text>
+    <text x="232" y="124" fill="#6f87a0" font-size="9">nginx · :80</text>
+    <rect x="232" y="134" width="156" height="6" rx="3" fill="#142a40"/>
+    <rect x="232" y="134" width="40" height="6" rx="3" fill="#2496ed"/>
+    <text x="232" y="156" fill="#5f7790" font-size="8.5">cpu 4% · mem 36MB</text>
+  </g>
+  <g>
+    <rect x="414" y="78" width="204" height="84" rx="9" fill="#0f2034" stroke="#1d3a57" stroke-width="1.3"/>
+    <circle cx="432" cy="98" r="5" fill="#34d399"/>
+    <text x="444" y="102" fill="#e3edf6" font-size="11" font-weight="600">postgres</text>
+    <text x="428" y="124" fill="#6f87a0" font-size="9">postgres:16 · :5432</text>
+    <rect x="428" y="134" width="176" height="6" rx="3" fill="#142a40"/>
+    <rect x="428" y="134" width="92" height="6" rx="3" fill="#2496ed"/>
+    <text x="428" y="156" fill="#5f7790" font-size="8.5">cpu 9% · mem 240MB</text>
+  </g>
+
+  <!-- stack 2 (replicas) -->
+  <text x="22" y="190" fill="#7d97b0" font-size="11" font-weight="600">stack: edge-services · 3 replicas</text>
+  <g>
+    <rect x="22" y="200" width="120" height="74" rx="9" fill="#0f2034" stroke="#1d3a57" stroke-width="1.3"/>
+    <circle cx="40" cy="220" r="5" fill="#34d399"/>
+    <text x="52" y="224" fill="#e3edf6" font-size="11" font-weight="600">api · r1</text>
+    <text x="36" y="246" fill="#6f87a0" font-size="9">healthy</text>
+    <rect x="36" y="256" width="92" height="6" rx="3" fill="#142a40"/>
+    <rect x="36" y="256" width="50" height="6" rx="3" fill="#34d399"/>
+  </g>
+  <g>
+    <rect x="154" y="200" width="120" height="74" rx="9" fill="#0f2034" stroke="#1d3a57" stroke-width="1.3"/>
+    <circle cx="172" cy="220" r="5" fill="#34d399"/>
+    <text x="184" y="224" fill="#e3edf6" font-size="11" font-weight="600">api · r2</text>
+    <text x="168" y="246" fill="#6f87a0" font-size="9">healthy</text>
+    <rect x="168" y="256" width="92" height="6" rx="3" fill="#142a40"/>
+    <rect x="168" y="256" width="64" height="6" rx="3" fill="#34d399"/>
+  </g>
+  <g>
+    <rect x="286" y="200" width="120" height="74" rx="9" fill="#0f2034" stroke="#7a5b12" stroke-width="1.3"/>
+    <circle cx="304" cy="220" r="5" fill="#fbbf24"><animate attributeName="opacity" values="1;0.4;1" dur="1.5s" repeatCount="indefinite"/></circle>
+    <text x="316" y="224" fill="#e3edf6" font-size="11" font-weight="600">api · r3</text>
+    <text x="300" y="246" fill="#caa84e" font-size="9">restarting</text>
+    <rect x="300" y="256" width="92" height="6" rx="3" fill="#142a40"/>
+    <rect x="300" y="256" width="28" height="6" rx="3" fill="#fbbf24"/>
+  </g>
+
+  <!-- compose terminal -->
+  <rect x="22" y="288" width="596" height="96" rx="9" fill="#06101c" stroke="#15324d" stroke-width="1.3"/>
+  <circle cx="40" cy="306" r="4" fill="#ff5f56"/><circle cx="54" cy="306" r="4" fill="#ffbd2e"/><circle cx="68" cy="306" r="4" fill="#27c93f"/>
+  <text x="86" y="310" fill="#5f7790" font-size="9">bash — deploy</text>
+  <text x="36" y="332" fill="#7fd1ff" font-size="11" font-family="Consolas,monospace">$ docker compose up -d --build</text>
+  <text x="36" y="350" fill="#86b3a2" font-size="11" font-family="Consolas,monospace">✔ backend  ✔ frontend  ✔ postgres   <tspan fill="#5f7790">created</tspan></text>
+  <text x="36" y="368" fill="#cdd9e3" font-size="11" font-family="Consolas,monospace">$ docker compose ps  <tspan fill="#34d399">→ 3 up (healthy)</tspan></text>
+</svg>

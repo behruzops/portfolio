@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="odpBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#070b15"/>
+    </linearGradient>
+    <linearGradient id="odpHead" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0e1a33"/>
+      <stop offset="1" stop-color="#142544"/>
+    </linearGradient>
+    <linearGradient id="odpChart" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- frame -->
+  <rect x="0" y="0" width="640" height="400" rx="14" fill="url(#odpBg)" stroke="#1e2b46" stroke-width="1.5"/>
+
+  <!-- top bar -->
+  <rect x="0" y="0" width="640" height="46" rx="14" fill="url(#odpHead)"/>
+  <rect x="0" y="32" width="640" height="14" fill="#142544"/>
+  <circle cx="26" cy="23" r="9" fill="none" stroke="#22d3ee" stroke-width="2"/>
+  <circle cx="26" cy="23" r="2.5" fill="#22d3ee"/>
+  <text x="44" y="28" fill="#e6edf6" font-size="15" font-weight="700">OrionDB <tspan fill="#22d3ee">Pro</tspan></text>
+  <text x="150" y="28" fill="#6b7d99" font-size="11">real-time monitoring</text>
+  <!-- live dot -->
+  <circle cx="556" cy="23" r="4" fill="#34d399"/>
+  <text x="566" y="27" fill="#9fb0c9" font-size="11">LIVE</text>
+  <rect x="600" y="14" width="24" height="18" rx="4" fill="#1b2a47"/>
+  <circle cx="606" cy="23" r="1.6" fill="#7d8fae"/><circle cx="612" cy="23" r="1.6" fill="#7d8fae"/><circle cx="618" cy="23" r="1.6" fill="#7d8fae"/>
+
+  <!-- database tiles (svetafor) -->
+  <!-- green -->
+  <g>
+    <rect x="20" y="62" width="142" height="78" rx="10" fill="#0f1a2c" stroke="#1c5e3f" stroke-width="1.5"/>
+    <circle cx="38" cy="82" r="6" fill="#34d399"/>
+    <text x="52" y="86" fill="#e6edf6" font-size="12" font-weight="600">PROD_CORE</text>
+    <text x="34" y="108" fill="#6b7d99" font-size="9">Sessions</text>
+    <text x="34" y="124" fill="#cfe6dd" font-size="16" font-weight="700">214</text>
+    <text x="104" y="108" fill="#6b7d99" font-size="9">CPU</text>
+    <text x="104" y="124" fill="#cfe6dd" font-size="16" font-weight="700">38%</text>
+  </g>
+  <!-- yellow (pulse) -->
+  <g>
+    <rect x="174" y="62" width="142" height="78" rx="10" fill="#1c1605" stroke="#7a5b12" stroke-width="1.5"/>
+    <circle cx="192" cy="82" r="6" fill="#fbbf24">
+      <animate attributeName="opacity" values="1;0.35;1" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="206" y="86" fill="#e6edf6" font-size="12" font-weight="600">DWH_BILLING</text>
+    <text x="188" y="108" fill="#6b7d99" font-size="9">Sessions</text>
+    <text x="188" y="124" fill="#f4e3b5" font-size="16" font-weight="700">512</text>
+    <text x="258" y="108" fill="#6b7d99" font-size="9">CPU</text>
+    <text x="258" y="124" fill="#f4e3b5" font-size="16" font-weight="700">71%</text>
+  </g>
+  <!-- red (critical pulse) -->
+  <g>
+    <rect x="328" y="62" width="142" height="78" rx="10" fill="#220a0a" stroke="#7f1d1d" stroke-width="1.5">
+      <animate attributeName="stroke" values="#7f1d1d;#ef4444;#7f1d1d" dur="1.1s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="346" cy="82" r="6" fill="#ef4444">
+      <animate attributeName="r" values="6;7.5;6" dur="1.1s" repeatCount="indefinite"/>
+    </circle>
+    <text x="360" y="86" fill="#e6edf6" font-size="12" font-weight="600">PROD_PAY</text>
+    <text x="342" y="108" fill="#6b7d99" font-size="9">Blocked</text>
+    <text x="342" y="124" fill="#ffc7c7" font-size="16" font-weight="700">17</text>
+    <text x="412" y="108" fill="#6b7d99" font-size="9">CPU</text>
+    <text x="412" y="124" fill="#ffc7c7" font-size="16" font-weight="700">96%</text>
+  </g>
+  <!-- green 2 -->
+  <g>
+    <rect x="482" y="62" width="138" height="78" rx="10" fill="#0f1a2c" stroke="#1c5e3f" stroke-width="1.5"/>
+    <circle cx="500" cy="82" r="6" fill="#34d399"/>
+    <text x="514" y="86" fill="#e6edf6" font-size="12" font-weight="600">DEV_TEST</text>
+    <text x="496" y="108" fill="#6b7d99" font-size="9">Sessions</text>
+    <text x="496" y="124" fill="#cfe6dd" font-size="16" font-weight="700">23</text>
+    <text x="566" y="108" fill="#6b7d99" font-size="9">CPU</text>
+    <text x="566" y="124" fill="#cfe6dd" font-size="16" font-weight="700">9%</text>
+  </g>
+
+  <!-- chart panel -->
+  <rect x="20" y="158" width="380" height="222" rx="10" fill="#0c1626" stroke="#1c2a44" stroke-width="1.5"/>
+  <text x="36" y="182" fill="#9fb0c9" font-size="12" font-weight="600">Active sessions / 1h</text>
+  <!-- gridlines -->
+  <g stroke="#1a2840" stroke-width="1">
+    <line x1="36" y1="210" x2="384" y2="210"/>
+    <line x1="36" y1="252" x2="384" y2="252"/>
+    <line x1="36" y1="294" x2="384" y2="294"/>
+    <line x1="36" y1="336" x2="384" y2="336"/>
+  </g>
+  <!-- area -->
+  <path d="M36 320 L80 300 L124 308 L168 270 L212 286 L256 240 L300 262 L344 224 L384 250 L384 336 L36 336 Z" fill="url(#odpChart)"/>
+  <path d="M36 320 L80 300 L124 308 L168 270 L212 286 L256 240 L300 262 L344 224 L384 250" fill="none" stroke="#22d3ee" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="344" cy="224" r="3.2" fill="#22d3ee"/>
+
+  <!-- jobs / alerts side panel -->
+  <rect x="412" y="158" width="208" height="222" rx="10" fill="#0c1626" stroke="#1c2a44" stroke-width="1.5"/>
+  <text x="428" y="182" fill="#9fb0c9" font-size="12" font-weight="600">Alerts &amp; Jobs</text>
+
+  <rect x="428" y="194" width="176" height="34" rx="7" fill="#1a0c0c" stroke="#7f1d1d" stroke-width="1"/>
+  <circle cx="442" cy="211" r="4" fill="#ef4444"/>
+  <text x="454" y="208" fill="#ffd2d2" font-size="10" font-weight="600">CRITICAL · PROD_PAY</text>
+  <text x="454" y="221" fill="#b98a8a" font-size="8.5">row lock contention</text>
+
+  <rect x="428" y="234" width="176" height="34" rx="7" fill="#1c1605" stroke="#7a5b12" stroke-width="1"/>
+  <circle cx="442" cy="251" r="4" fill="#fbbf24"/>
+  <text x="454" y="248" fill="#f4e3b5" font-size="10" font-weight="600">WARN · DWH_BILLING</text>
+  <text x="454" y="261" fill="#b8a978" font-size="8.5">tablespace 86%</text>
+
+  <rect x="428" y="274" width="176" height="34" rx="7" fill="#0f1a2c" stroke="#1c5e3f" stroke-width="1"/>
+  <circle cx="442" cy="291" r="4" fill="#34d399"/>
+  <text x="454" y="288" fill="#cfe6dd" font-size="10" font-weight="600">JOB OK · nightly_etl</text>
+  <text x="454" y="301" fill="#86b3a2" font-size="8.5">finished 02:14</text>
+
+  <rect x="428" y="314" width="176" height="34" rx="7" fill="#0f1a2c" stroke="#1c2a44" stroke-width="1"/>
+  <text x="442" y="335" fill="#7d8fae" font-size="9">RBAC · viewer / operator / admin</text>
+</svg>

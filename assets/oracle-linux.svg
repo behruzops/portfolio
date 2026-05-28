@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="Consolas,'Courier New',monospace">
+  <defs>
+    <linearGradient id="orBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a0e14"/>
+      <stop offset="1" stop-color="#05080d"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="640" height="400" rx="14" fill="url(#orBg)" stroke="#1a2230" stroke-width="1.5"/>
+
+  <!-- terminal title bar -->
+  <rect x="0" y="0" width="640" height="36" rx="14" fill="#11161f"/>
+  <rect x="0" y="24" width="640" height="12" fill="#11161f"/>
+  <circle cx="22" cy="18" r="5" fill="#ff5f56"/><circle cx="40" cy="18" r="5" fill="#ffbd2e"/><circle cx="58" cy="18" r="5" fill="#27c93f"/>
+  <text x="320" y="22" fill="#6b7886" font-size="11" text-anchor="middle" font-family="'Segoe UI',Arial">oracle@dbsrv01 : ~  —  SQL*Plus</text>
+  <!-- oracle mark -->
+  <text x="588" y="23" fill="#f80000" font-size="12" font-weight="700" font-family="'Segoe UI',Arial">ORACLE</text>
+
+  <!-- terminal body -->
+  <text x="20" y="62" fill="#7fd1ff" font-size="12">[oracle@dbsrv01 ~]$ sqlplus / as sysdba</text>
+  <text x="20" y="82" fill="#8a97a6" font-size="12">SQL*Plus: Release 19.0.0.0.0 — Production</text>
+  <text x="20" y="102" fill="#8a97a6" font-size="12">Connected to: Oracle Database 19c Enterprise Edition</text>
+
+  <text x="20" y="128" fill="#7ee787" font-size="12">SQL&gt; <tspan fill="#e6edf3">SELECT inst_id, status, database_status FROM gv$instance;</tspan></text>
+  <text x="36" y="148" fill="#6b7886" font-size="11.5">  INST_ID STATUS    DATABASE_STATUS</text>
+  <text x="36" y="164" fill="#3b4654" font-size="11.5">--------- --------- ----------------</text>
+  <text x="36" y="180" fill="#cdd9e3" font-size="11.5">        1 OPEN      ACTIVE</text>
+  <text x="36" y="196" fill="#cdd9e3" font-size="11.5">        2 OPEN      ACTIVE</text>
+
+  <text x="20" y="222" fill="#7ee787" font-size="12">SQL&gt; <tspan fill="#e6edf3">SELECT tablespace_name, ROUND(used_pct) pct FROM dba_ts_usage;</tspan></text>
+  <text x="36" y="242" fill="#6b7886" font-size="11.5">TABLESPACE_NAME            PCT</text>
+  <text x="36" y="258" fill="#cdd9e3" font-size="11.5">SYSTEM                      54</text>
+  <text x="36" y="274" fill="#cdd9e3" font-size="11.5">USERS                       <tspan fill="#fbbf24">86</tspan></text>
+  <text x="36" y="290" fill="#cdd9e3" font-size="11.5">UNDOTBS1                    31</text>
+
+  <!-- a bash automation snippet -->
+  <text x="20" y="318" fill="#8a97a6" font-size="12">[oracle@dbsrv01 ~]$ ./check_db.sh --alert</text>
+  <text x="20" y="338" fill="#7fd1ff" font-size="12">  → 3 databases checked, 1 warning</text>
+  <text x="20" y="358" fill="#34d399" font-size="12">  → telegram alert sent ✓   <tspan fill="#6b7886">(cron: */5 * * * *)</tspan></text>
+  <rect x="20" y="370" width="9" height="15" fill="#7ee787">
+    <animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite"/>
+  </rect>
+</svg>

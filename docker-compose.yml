@@ -1,0 +1,9 @@
+services:
+  portfolio:
+    build: .
+    image: shuxratov-portfolio:latest
+    container_name: portfolio
+    restart: unless-stopped
+    ports:
+      # host:container — change 8080 to 80 to serve directly on the default web port
+      - "8080:80"

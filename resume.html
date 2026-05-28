@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shuxratov Behruz — Resume</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/resume.css" />
+</head>
+<body>
+  <div class="toolbar">
+    <a class="back" href="index.html">&larr; <span id="tb-back">Saytga qaytish</span></a>
+    <div class="lang" id="tb-lang">
+      <button data-lang="uz" class="active">UZ</button>
+      <button data-lang="ru">RU</button>
+      <button data-lang="en">EN</button>
+    </div>
+    <button class="dl" id="tb-print">
+      <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM18 3H6v4h12V3z"/></svg>
+      <span id="tb-print-label">PDF yuklab olish</span>
+    </button>
+  </div>
+
+  <div class="sheet" id="sheet">
+    <header class="r-header">
+      <div class="r-name">Shuxratov Behruz</div>
+      <div class="r-title" id="r-title">Monitoring muhandisi · Oracle DBA</div>
+      <div class="r-rule"></div>
+    </header>
+
+    <div class="r-body">
+      <aside class="r-side">
+        <div class="s-block">
+          <div class="s-head" id="h-contact">Aloqa</div>
+          <div id="contact-list"></div>
+        </div>
+        <div class="s-block">
+          <div class="s-head" id="h-skills">Ko'nikmalar</div>
+          <div id="skills-list"></div>
+        </div>
+        <div class="s-block">
+          <div class="s-head" id="h-langs">Tillar</div>
+          <div id="langs-list"></div>
+        </div>
+        <div class="s-block">
+          <div class="s-head" id="h-edu">Ta'lim</div>
+          <div id="edu-list"></div>
+        </div>
+        <div class="s-block">
+          <div class="s-head" id="h-cert">Sertifikatlar</div>
+          <div id="cert-list"></div>
+        </div>
+      </aside>
+
+      <main class="r-main">
+        <div class="m-block">
+          <div class="m-head" id="h-profile">Profil</div>
+          <p class="m-summary" id="summary"></p>
+        </div>
+        <div class="m-block">
+          <div class="m-head" id="h-exp">Ish tajribasi</div>
+          <div id="exp-list"></div>
+        </div>
+        <div class="m-block">
+          <div class="m-head" id="h-proj">Asosiy loyihalar</div>
+          <div id="proj-list"></div>
+        </div>
+        <div class="m-block">
+          <div class="m-head" id="h-goals">Maqsadlar</div>
+          <ul class="r-goals" id="goals-main"></ul>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/resume.js"></script>
+</body>
+</html>

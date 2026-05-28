@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="gfBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#161719"/>
+      <stop offset="1" stop-color="#0e0f11"/>
+    </linearGradient>
+    <linearGradient id="gfArea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f59e0b" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#f59e0b" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="gfArea2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#10b981" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#10b981" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="640" height="400" rx="14" fill="url(#gfBg)" stroke="#26282b" stroke-width="1.5"/>
+
+  <!-- top bar -->
+  <rect x="0" y="0" width="640" height="40" rx="14" fill="#1f2024"/>
+  <rect x="0" y="26" width="640" height="14" fill="#1f2024"/>
+  <!-- grafana logo mark -->
+  <circle cx="24" cy="20" r="10" fill="none" stroke="#f59e0b" stroke-width="2"/>
+  <path d="M24 12 a8 8 0 0 1 7 4" fill="none" stroke="#f97316" stroke-width="2"/>
+  <text x="42" y="25" fill="#d8d9da" font-size="13" font-weight="700">Infra Monitoring</text>
+  <rect x="486" y="10" width="80" height="20" rx="5" fill="#2b2d31"/>
+  <text x="498" y="24" fill="#9aa0a6" font-size="10">Last 6h</text>
+  <circle cx="556" cy="20" r="3" fill="#73bf69"/>
+  <rect x="574" y="10" width="54" height="20" rx="5" fill="#2b2d31"/>
+  <text x="584" y="24" fill="#9aa0a6" font-size="10">5s</text>
+
+  <!-- stat panels row -->
+  <g>
+    <rect x="16" y="50" width="148" height="70" rx="8" fill="#181a1d" stroke="#2a2c30" stroke-width="1"/>
+    <text x="28" y="70" fill="#8e9297" font-size="10">CPU usage</text>
+    <text x="28" y="100" fill="#73bf69" font-size="26" font-weight="700">42%</text>
+    <path d="M104 108 l8 -6 l8 3 l8 -9 l8 4 l8 -7" fill="none" stroke="#73bf69" stroke-width="2"/>
+  </g>
+  <g>
+    <rect x="172" y="50" width="148" height="70" rx="8" fill="#181a1d" stroke="#2a2c30" stroke-width="1"/>
+    <text x="184" y="70" fill="#8e9297" font-size="10">Memory</text>
+    <text x="184" y="100" fill="#f2cc0c" font-size="26" font-weight="700">68%</text>
+    <path d="M260 108 l8 -3 l8 -4 l8 2 l8 -6 l8 1" fill="none" stroke="#f2cc0c" stroke-width="2"/>
+  </g>
+  <g>
+    <rect x="328" y="50" width="148" height="70" rx="8" fill="#181a1d" stroke="#2a2c30" stroke-width="1"/>
+    <text x="340" y="70" fill="#8e9297" font-size="10">Disk I/O</text>
+    <text x="340" y="100" fill="#ff7383" font-size="26" font-weight="700">88%</text>
+    <path d="M416 108 l8 -2 l8 -8 l8 5 l8 -4 l8 -3" fill="none" stroke="#ff7383" stroke-width="2"/>
+  </g>
+  <g>
+    <rect x="484" y="50" width="140" height="70" rx="8" fill="#181a1d" stroke="#2a2c30" stroke-width="1"/>
+    <text x="496" y="70" fill="#8e9297" font-size="10">Uptime</text>
+    <text x="496" y="100" fill="#73bf69" font-size="22" font-weight="700">99.98%</text>
+  </g>
+
+  <!-- big time-series panel -->
+  <rect x="16" y="130" width="384" height="252" rx="8" fill="#181a1d" stroke="#2a2c30" stroke-width="1"/>
+  <text x="28" y="152" fill="#d8d9da" font-size="12" font-weight="600">Network throughput</text>
+  <g stroke="#26282b" stroke-width="1">
+    <line x1="28" y1="180" x2="388" y2="180"/>
+    <line x1="28" y1="225" x2="388" y2="225"/>
+    <line x1="28" y1="270" x2="388" y2="270"/>
+    <line x1="28" y1="315" x2="388" y2="315"/>
+    <line x1="28" y1="360" x2="388" y2="360"/>
+  </g>
+  <!-- area series 1 (orange) -->
+  <path d="M28 320 L70 300 L112 312 L154 268 L196 290 L238 250 L280 276 L322 236 L364 262 L388 248 L388 360 L28 360 Z" fill="url(#gfArea)"/>
+  <path d="M28 320 L70 300 L112 312 L154 268 L196 290 L238 250 L280 276 L322 236 L364 262 L388 248" fill="none" stroke="#f59e0b" stroke-width="2.2" stroke-linejoin="round"/>
+  <!-- area series 2 (green) -->
+  <path d="M28 345 L70 338 L112 342 L154 320 L196 332 L238 312 L280 326 L322 304 L364 322 L388 314 L388 360 L28 360 Z" fill="url(#gfArea2)"/>
+  <path d="M28 345 L70 338 L112 342 L154 320 L196 332 L238 312 L280 326 L322 304 L364 322 L388 314" fill="none" stroke="#10b981" stroke-width="2" stroke-linejoin="round"/>
+  <!-- legend -->
+  <circle cx="300" cy="150" r="4" fill="#f59e0b"/><text x="310" y="154" fill="#9aa0a6" font-size="9">tx</text>
+  <circle cx="338" cy="150" r="4" fill="#10b981"/><text x="348" y="154" fill="#9aa0a6" font-size="9">rx</text>
+
+  <!-- gauge panel -->
+  <rect x="408" y="130" width="216" height="124" rx="8" fill="#181a1d" stroke="#2a2c30" stroke-width="1"/>
+  <text x="420" y="152" fill="#d8d9da" font-size="12" font-weight="600">Request latency</text>
+  <path d="M448 226 A60 60 0 0 1 584 226" fill="none" stroke="#2a2c30" stroke-width="14" stroke-linecap="round"/>
+  <path d="M448 226 A60 60 0 0 1 556 192" fill="none" stroke="#73bf69" stroke-width="14" stroke-linecap="round"/>
+  <text x="516" y="236" fill="#73bf69" font-size="22" font-weight="700" text-anchor="middle">124ms</text>
+
+  <!-- bar panel -->
+  <rect x="408" y="262" width="216" height="120" rx="8" fill="#181a1d" stroke="#2a2c30" stroke-width="1"/>
+  <text x="420" y="284" fill="#d8d9da" font-size="12" font-weight="600">Requests / node</text>
+  <rect x="424" y="350" width="22" height="22" fill="#5794f2"/>
+  <rect x="456" y="332" width="22" height="40" fill="#5794f2"/>
+  <rect x="488" y="316" width="22" height="56" fill="#5794f2"/>
+  <rect x="520" y="340" width="22" height="32" fill="#5794f2"/>
+  <rect x="552" y="324" width="22" height="48" fill="#5794f2"/>
+  <rect x="584" y="346" width="22" height="26" fill="#5794f2"/>
+</svg>
