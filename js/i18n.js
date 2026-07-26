@@ -521,6 +521,116 @@ window.CONTENT = {
         en: "Monthly technical support — I watch your systems, react to issues fast, plus updates and maintenance. Scope agreed individually."
       },
       tags: ["Support", "SLA", "Maintenance"]
+    },
+    {
+      icon: "googlegemini", price: "$300",
+      title: { uz: "AI chatbot (bilim bazasi)", ru: "AI чат-бот (база знаний)", en: "AI chatbot (knowledge base)" },
+      desc: {
+        uz: "Sayt uchun AI chatbot — kompaniya hujjatlari va ma'lumotlaridan javob beradi (RAG).",
+        ru: "AI чат-бот для сайта — отвечает на основе документов и данных компании (RAG).",
+        en: "An AI chatbot for your site that answers from your company docs and data (RAG)."
+      },
+      tags: ["AI", "RAG", "Gemini"]
+    },
+    {
+      icon: "telegram", price: "$250",
+      title: { uz: "CRM + Telegram lead bot", ru: "CRM + Telegram lead-бот", en: "CRM + Telegram lead bot" },
+      desc: {
+        uz: "Mijozlar bazasi + so'rovlarni Telegram bot orqali yig'ish, holat va izohlar bilan boshqarish.",
+        ru: "База клиентов + сбор заявок через Telegram-бота, управление статусами и заметками.",
+        en: "A customer base plus lead capture via a Telegram bot, managed with statuses and notes."
+      },
+      tags: ["CRM", "Telegram", "Leads"]
+    },
+    {
+      icon: "twilio", price: "$150",
+      title: { uz: "SMS / xabarnoma gateway", ru: "SMS / рассылка", en: "SMS / notification gateway" },
+      desc: {
+        uz: "Kontaktlar ro'yxatiga ommaviy SMS (Eskiz.uz) va Telegram xabarlar yuborish paneli.",
+        ru: "Панель массовой рассылки SMS (Eskiz.uz) и Telegram-сообщений по списку контактов.",
+        en: "A panel for bulk SMS (Eskiz.uz) and Telegram messages to a contact list."
+      },
+      tags: ["SMS", "Telegram", "Broadcast"]
+    },
+    {
+      icon: "qrcode", price: "$150",
+      title: { uz: "QR-menyu + buyurtma", ru: "QR-меню + заказы", en: "QR menu + ordering" },
+      desc: {
+        uz: "Stolga QR → mijoz menyuni ko'radi va buyurtma beradi → oshxona ekraniga real vaqtda tushadi.",
+        ru: "QR на столе → клиент смотрит меню и заказывает → заказ в реальном времени на кухню.",
+        en: "A QR at the table → the guest views the menu and orders → it hits the kitchen screen in real time."
+      },
+      tags: ["QR", "Restoran", "Real-time"]
+    },
+    {
+      icon: "square", price: "$250",
+      title: { uz: "Do'kon / ombor + kassa (POS)", ru: "Магазин / склад + касса (POS)", en: "Shop / inventory + POS" },
+      desc: {
+        uz: "Tovar, barcode, sotuv, qoldiq va hisobotlar — kassa (POS) va ombor bir tizimda.",
+        ru: "Товары, штрихкоды, продажи, остатки и отчёты — касса (POS) и склад в одной системе.",
+        en: "Products, barcodes, sales, stock and reports — POS and inventory in one system."
+      },
+      tags: ["POS", "Inventory", "Barcode"]
+    },
+    {
+      icon: "googlecalendar", price: "$150",
+      title: { uz: "Booking / rezervatsiya", ru: "Бронирование / запись", en: "Booking / reservations" },
+      desc: {
+        uz: "Xizmat + sana + bo'sh vaqt tanlash, band qilish va Telegram tasdiq. Salon, kort, shifokor uchun.",
+        ru: "Выбор услуги + даты + свободного времени, бронь и Telegram-подтверждение. Для салона, корта, врача.",
+        en: "Pick a service + date + free slot, book it, get a Telegram confirmation. For salons, courts, clinics."
+      },
+      tags: ["Booking", "Slots", "Telegram"]
+    },
+    {
+      icon: "queue", price: "$150",
+      title: { uz: "Onlayn navbat (queue)", ru: "Электронная очередь", en: "Online queue" },
+      desc: {
+        uz: "Raqam olish + katta ekranda chaqiruv + operator paneli. Klinika, bank, MFY uchun.",
+        ru: "Взять номер + вызов на большом экране + панель оператора. Для клиники, банка, МФЦ.",
+        en: "Take a number + call it on a big screen + operator panel. For clinics, banks, service centers."
+      },
+      tags: ["Queue", "Display", "Operator"]
+    },
+    {
+      icon: "fitbit", price: "$200",
+      title: { uz: "Fitnes zal a'zolik tizimi", ru: "Система абонементов фитнес-зала", en: "Gym membership system" },
+      desc: {
+        uz: "A'zolar, karta/obuna, kirish nazorati (check-in), obuna muddati va tugash ogohlantirishlari.",
+        ru: "Абоненты, карты/подписки, контроль входа (check-in), сроки и напоминания об окончании.",
+        en: "Members, cards/subscriptions, check-in control, terms and expiry reminders."
+      },
+      tags: ["Membership", "Check-in", "Cards"]
+    },
+    {
+      icon: "prometheus", price: "$200",
+      title: { uz: "Server monitoring + Telegram alert", ru: "Мониторинг серверов + Telegram-алерты", en: "Server monitoring + Telegram alerts" },
+      desc: {
+        uz: "Prometheus + Grafana + Alertmanager — CPU/RAM/disk kuzatuvi va Telegram ogohlantirish, bir buyruq bilan.",
+        ru: "Prometheus + Grafana + Alertmanager — мониторинг CPU/RAM/диска и Telegram-алерты, одной командой.",
+        en: "Prometheus + Grafana + Alertmanager — CPU/RAM/disk monitoring and Telegram alerts, in one command."
+      },
+      tags: ["Prometheus", "Grafana", "Alerting"]
+    },
+    {
+      icon: "rclone", price: "$150",
+      title: { uz: "Backup avtomatlashtirish", ru: "Автоматизация бэкапов", en: "Backup automation" },
+      desc: {
+        uz: "Baza va fayllarni avtomatik zaxiralash → cloud'ga yuklash → Telegram xabar, cron bilan jadval.",
+        ru: "Автоматический бэкап базы и файлов → загрузка в облако → Telegram-уведомление, по расписанию (cron).",
+        en: "Automatic database + file backups → upload to cloud → Telegram notice, scheduled via cron."
+      },
+      tags: ["Backup", "Cron", "Cloud"]
+    },
+    {
+      icon: "uptimekuma", price: "$100",
+      title: { uz: "Uptime status sahifasi", ru: "Страница статуса (uptime)", en: "Uptime status page" },
+      desc: {
+        uz: "Servislaringiz ishlayaptimi — ochiq status sahifasi, uptime foizi va insidentlar tarixi bilan.",
+        ru: "Работают ли ваши сервисы — публичная страница статуса с процентом аптайма и историей инцидентов.",
+        en: "Are your services up — a public status page with uptime percentage and an incident timeline."
+      },
+      tags: ["Uptime", "Status", "SRE"]
     }
   ],
 
