@@ -6,6 +6,7 @@ window.I18N = {
     nav_experience: "Tajriba",
     nav_education: "Ta'lim",
     nav_skills: "Ko'nikmalar",
+    nav_services: "Xizmatlar",
     nav_projects: "Loyihalar",
     nav_certificates: "Sertifikatlar",
     nav_contact: "Aloqa",
@@ -40,18 +41,26 @@ window.I18N = {
     can_title: "Imkoniyatlarim",
     can_sub: "Quyida amalda qila oladigan ishlarimdan namunalar.",
 
-    systems_kicker: "06 — Loyihalar",
+    svc_kicker: "06 — Xizmatlar",
+    svc_title: "Xizmatlar va narxlar",
+    svc_sub: "Buyurtma asosida quyidagi ishlarni bajaraman. Narxlar boshlang'ich — aniq narx loyiha hajmiga qarab kelishiladi.",
+    svc_from: "dan boshlab",
+    svc_note: "Narxlar taxminiy va kelishiladi. Bepul maslahat uchun bemalol yozing.",
+    svc_cta: "Buyurtma / maslahat",
+
+    systems_kicker: "07 — Loyihalar",
     systems_title: "Loyihalarim",
+    systems_sub: "Tayyor va ishlaydigan loyihalardan namunalar.",
     odp_tag: "Oracle bazalarni real vaqtda kuzatuvchi monitoring dashboard.",
     odp_desc: "Oracle Enterprise Manager o'rnida ishlaydigan, bir nechta Oracle bazasini bitta oynadan real vaqtda kuzatish uchun professional dashboard. Node.js, React va PostgreSQL asosida qurilgan.",
     odp_note: "Bu — tizimning juda qisqa tavsifi. To'liq imkoniyatlari ancha keng.",
 
-    cert_kicker: "07 — Sertifikatlar",
+    cert_kicker: "08 — Sertifikatlar",
     cert_title: "Sertifikatlar",
     cert_sub: "Tugatilgan kurslar va sertifikatlar.",
     cert_view: "To'liq ko'rish",
 
-    goals_kicker: "08 — Yo'nalish",
+    goals_kicker: "09 — Yo'nalish",
     goals_title: "Maqsadlarim",
 
     contact_title: "Bog'lanish",
@@ -64,6 +73,7 @@ window.I18N = {
     nav_experience: "Опыт",
     nav_education: "Образование",
     nav_skills: "Навыки",
+    nav_services: "Услуги",
     nav_projects: "Проекты",
     nav_certificates: "Сертификаты",
     nav_contact: "Контакты",
@@ -98,18 +108,26 @@ window.I18N = {
     can_title: "Мои возможности",
     can_sub: "Ниже — примеры того, что я делаю на практике.",
 
-    systems_kicker: "06 — Проекты",
+    svc_kicker: "06 — Услуги",
+    svc_title: "Услуги и цены",
+    svc_sub: "Выполняю следующие работы на заказ. Цены стартовые — точная стоимость обсуждается исходя из объёма проекта.",
+    svc_from: "от",
+    svc_note: "Цены ориентировочные и обсуждаются. Пишите за бесплатной консультацией.",
+    svc_cta: "Заказать / консультация",
+
+    systems_kicker: "07 — Проекты",
     systems_title: "Мои проекты",
+    systems_sub: "Примеры готовых, работающих проектов.",
     odp_tag: "Дашборд для мониторинга баз Oracle в реальном времени.",
     odp_desc: "Профессиональный дашборд-замена Oracle Enterprise Manager для мониторинга нескольких баз Oracle из одного окна в реальном времени. Построен на Node.js, React и PostgreSQL.",
     odp_note: "Это очень краткое описание. Реальные возможности системы значительно шире.",
 
-    cert_kicker: "07 — Сертификаты",
+    cert_kicker: "08 — Сертификаты",
     cert_title: "Сертификаты",
     cert_sub: "Завершённые курсы и сертификаты.",
     cert_view: "Открыть полностью",
 
-    goals_kicker: "08 — Направление",
+    goals_kicker: "09 — Направление",
     goals_title: "Мои цели",
 
     contact_title: "Связаться",
@@ -122,6 +140,7 @@ window.I18N = {
     nav_experience: "Experience",
     nav_education: "Education",
     nav_skills: "Skills",
+    nav_services: "Services",
     nav_projects: "Projects",
     nav_certificates: "Certificates",
     nav_contact: "Contact",
@@ -156,18 +175,26 @@ window.I18N = {
     can_title: "My capabilities",
     can_sub: "Below are samples of what I do in practice.",
 
-    systems_kicker: "06 — Projects",
+    svc_kicker: "06 — Services",
+    svc_title: "Services & pricing",
+    svc_sub: "I take on the following work on a freelance basis. Prices are starting points — the final quote depends on project scope.",
+    svc_from: "from",
+    svc_note: "Prices are indicative and negotiable. Reach out for a free consultation.",
+    svc_cta: "Order / consult",
+
+    systems_kicker: "07 — Projects",
     systems_title: "My projects",
+    systems_sub: "Samples of finished, working products.",
     odp_tag: "A real-time monitoring dashboard for Oracle databases.",
     odp_desc: "A professional Oracle Enterprise Manager replacement that monitors multiple Oracle databases from a single screen in real time. Built with Node.js, React and PostgreSQL.",
     odp_note: "This is a very short summary. The system's real capabilities are far broader.",
 
-    cert_kicker: "07 — Certificates",
+    cert_kicker: "08 — Certificates",
     cert_title: "Certificates",
     cert_sub: "Completed courses and certificates.",
     cert_view: "View full",
 
-    goals_kicker: "08 — Direction",
+    goals_kicker: "09 — Direction",
     goals_title: "My goals",
 
     contact_title: "Get in touch",
@@ -351,6 +378,146 @@ window.CONTENT = {
         en: "Installing Oracle 19c, SQL queries, tablespace/instance monitoring and bash automation on Linux (cron)."
       },
       tags: ["Oracle 19c", "SQL", "Linux"]
+    }
+  ],
+
+  services: [
+    {
+      icon: "html5", price: "$150",
+      title: { uz: "Landing / portfolio sayt", ru: "Landing / портфолио сайт", en: "Landing / portfolio site" },
+      desc: {
+        uz: "Bir sahifali zamonaviy, mobilga moslashgan, tez ishlaydigan sayt. Dizayn, animatsiya va SEO asoslari bilan.",
+        ru: "Одностраничный современный, адаптивный и быстрый сайт. С дизайном, анимацией и базовым SEO.",
+        en: "A modern, responsive, fast single-page site. Includes design, animation and SEO basics."
+      },
+      tags: ["HTML/CSS/JS", "Responsive", "SEO"]
+    },
+    {
+      icon: "react", price: "$400",
+      title: { uz: "Ko'p sahifali / korporativ sayt", ru: "Многостраничный / корпоративный сайт", en: "Multi-page / corporate site" },
+      desc: {
+        uz: "Bir nechta sahifa, admin panel, ko'p tillilik va kontent boshqaruvi bilan to'liq korporativ sayt.",
+        ru: "Полноценный корпоративный сайт с несколькими страницами, админ-панелью, мультиязычностью и управлением контентом.",
+        en: "A full corporate website with multiple pages, an admin panel, multi-language support and content management."
+      },
+      tags: ["Multi-page", "Admin panel", "i18n"]
+    },
+    {
+      icon: "telegram", price: "$120",
+      title: { uz: "Telegram bot", ru: "Telegram-бот", en: "Telegram bot" },
+      desc: {
+        uz: "Avtomatlashtirish, xabarnoma, buyurtma yoki hisob-kitob botlari. Baza va admin panel bilan bog'lanadi.",
+        ru: "Боты для автоматизации, оповещений, приёма заказов или учёта. С подключением к базе и админкой.",
+        en: "Bots for automation, notifications, orders or accounting. Connects to a database and admin panel."
+      },
+      tags: ["Node.js", "Bot API", "Automation"]
+    },
+    {
+      icon: "grafana", price: "$300",
+      title: { uz: "Monitoring dashboard", ru: "Дашборд мониторинга", en: "Monitoring dashboard" },
+      desc: {
+        uz: "Server, baza va xizmatlar holatini real vaqtda ko'rsatuvchi panel + Telegram alert. Grafana yoki maxsus yechim.",
+        ru: "Панель мониторинга серверов, баз и сервисов в реальном времени + Telegram-оповещения. Grafana или своё решение.",
+        en: "A real-time panel for servers, databases and services + Telegram alerts. Grafana or a custom solution."
+      },
+      tags: ["Grafana", "Alerting", "Real-time"]
+    },
+    {
+      icon: "oracle", price: "$150",
+      title: { uz: "Oracle / PostgreSQL o'rnatish & sozlash", ru: "Установка и настройка Oracle / PostgreSQL", en: "Oracle / PostgreSQL setup & tuning" },
+      desc: {
+        uz: "Bazani noldan o'rnatish, xavfsiz sozlash, backup va foydalanuvchi/rol boshqaruvini yo'lga qo'yish.",
+        ru: "Установка базы с нуля, безопасная настройка, резервное копирование и управление пользователями/ролями.",
+        en: "Installing a database from scratch, secure configuration, backups and user/role management."
+      },
+      tags: ["Oracle 19c", "PostgreSQL", "Linux"]
+    },
+    {
+      icon: "postgresql", price: "$200",
+      title: { uz: "DB optimizatsiya & migratsiya", ru: "Оптимизация и миграция БД", en: "DB optimization & migration" },
+      desc: {
+        uz: "Sekin ishlayotgan so'rovlarni tezlashtirish, indekslash, ma'lumotni bir bazadan boshqasiga ko'chirish.",
+        ru: "Ускорение медленных запросов, индексация, перенос данных из одной базы в другую.",
+        en: "Speeding up slow queries, indexing, and migrating data from one database to another."
+      },
+      tags: ["SQL tuning", "Indexing", "Migration"]
+    },
+    {
+      icon: "docker", price: "$150",
+      title: { uz: "Docker / DevOps deployment", ru: "Docker / DevOps деплой", en: "Docker / DevOps deployment" },
+      desc: {
+        uz: "Ilovani konteynerlash, serverga joylash, domen/HTTPS sozlash va avtomatik ishga tushirish.",
+        ru: "Контейнеризация приложения, деплой на сервер, настройка домена/HTTPS и автозапуск.",
+        en: "Containerizing an app, deploying to a server, setting up a domain/HTTPS and auto-start."
+      },
+      tags: ["Docker", "Nginx", "CI/CD"]
+    },
+    {
+      icon: "flutter", price: "$350",
+      title: { uz: "Mobil ilova (Android)", ru: "Мобильное приложение (Android)", en: "Mobile app (Android)" },
+      desc: {
+        uz: "Flutter'da Android ilova — API, AI yoki baza bilan. Tayyor APK va do'konga chiqarishga yordam.",
+        ru: "Android-приложение на Flutter — с API, AI или базой. Готовый APK и помощь с публикацией.",
+        en: "An Android app in Flutter — with API, AI or a database. Ready APK and help with store publishing."
+      },
+      tags: ["Flutter", "Android", "APK"]
+    }
+  ],
+
+  projects: [
+    {
+      title: { uz: "RoboDeutsch & RoboEnglish", ru: "RoboDeutsch & RoboEnglish", en: "RoboDeutsch & RoboEnglish" },
+      desc: {
+        uz: "AI tutor bilan til o'rganish ilovalari (nemis va ingliz, 0→C1/IELTS). Speaking-birinchi metod, SRS takrorlash, 6000+ so'z, tayyor APK.",
+        ru: "Приложения для изучения языков с AI-репетитором (немецкий и английский, 0→C1/IELTS). Метод speaking-first, SRS-повторение, 6000+ слов, готовый APK.",
+        en: "Language-learning apps with an AI tutor (German & English, 0→C1/IELTS). Speaking-first method, SRS review, 6000+ words, ready APK."
+      },
+      tags: ["Flutter", "AI tutor", "APK"]
+    },
+    {
+      title: { uz: "OrionWatch — monitoring paneli", ru: "OrionWatch — панель мониторинга", en: "OrionWatch — monitoring panel" },
+      desc: {
+        uz: "Docker konteynerlar va portlarni kuzatuvchi cross-platform dashboard. Docker image sifatida tarqatiladi, bitta oynadan boshqariladi.",
+        ru: "Кросс-платформенный дашборд для мониторинга Docker-контейнеров и портов. Распространяется как Docker-образ, управление из одного окна.",
+        en: "A cross-platform dashboard for monitoring Docker containers and ports. Shipped as a Docker image, managed from a single screen."
+      },
+      tags: ["Docker", "Node.js", "Monitoring"]
+    },
+    {
+      title: { uz: "AZS smena tizimi", ru: "Система смен АЗС", en: "Fuel-station shift system" },
+      desc: {
+        uz: "Yoqilg'i shoxobchasi uchun smena, hisob va nazorat tizimi. Telegram orqali real vaqtda xabar va hisobotlar.",
+        ru: "Система учёта смен и контроля для АЗС. Уведомления и отчёты в реальном времени через Telegram.",
+        en: "A shift, accounting and control system for a fuel station. Real-time notifications and reports via Telegram."
+      },
+      tags: ["Node.js", "SQLite", "Telegram"]
+    },
+    {
+      title: { uz: "KaloriAI — ozuqa hisoblovchi", ru: "KaloriAI — счётчик калорий", en: "KaloriAI — nutrition counter" },
+      desc: {
+        uz: "Ovqat rasmi va izohdan kaloriya hamda ozuqa moddalarini hisoblovchi Android ilova. Gemini vision asosida, tayyor APK.",
+        ru: "Android-приложение, вычисляющее калории и питательные вещества по фото еды и описанию. На базе Gemini vision, готовый APK.",
+        en: "An Android app that estimates calories and nutrients from a food photo and a note. Powered by Gemini vision, ready APK."
+      },
+      tags: ["Flutter", "Gemini AI", "Android"]
+    },
+    {
+      title: { uz: "Telegram hisob & reja bot", ru: "Telegram-бот учёта и планов", en: "Telegram finance & planner bot" },
+      desc: {
+        uz: "Harajat, byudjet, qarz va kunlik reja botlari. O'zi PNG grafiklar chizadi, tashqi kutubxonasiz (0 dependency).",
+        ru: "Боты для расходов, бюджета, долгов и планов на день. Сами рисуют PNG-графики, без внешних библиотек (0 dependency).",
+        en: "Bots for expenses, budgets, debts and daily plans. They render PNG charts themselves, zero dependencies."
+      },
+      tags: ["Node.js", "Telegram Bot", "Charts"]
+    },
+    {
+      title: { uz: "myplan — o'quv platforma", ru: "myplan — учебная платформа", en: "myplan — learning platform" },
+      desc: {
+        uz: "Markdown asosidagi darslik va o'quv reja platformasi. Kurslar katalogi, darslar va moslashuvchan o'quv rejalari.",
+        ru: "Платформа учебников и учебных планов на основе Markdown. Каталог курсов, уроки и гибкие планы обучения.",
+        en: "A Markdown-based textbook and curriculum platform. A course catalog, lessons and flexible study plans."
+      },
+      tags: ["Web", "Markdown", "Education"]
     }
   ],
 

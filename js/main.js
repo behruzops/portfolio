@@ -132,6 +132,77 @@ window.App = (function () {
     });
   }
 
+  /* ---- services & pricing ---- */
+  function renderServices() {
+    const wrap = $("#pricing-grid");
+    if (!wrap) return;
+    wrap.innerHTML = "";
+    (CONTENT.services || []).forEach((s) => {
+      const card = document.createElement("article");
+      card.className = "price-card reveal";
+
+      const head = document.createElement("div");
+      head.className = "price-head";
+      const tile = document.createElement("span");
+      tile.className = "price-ic";
+      if (s.icon) {
+        const img = document.createElement("img");
+        img.src = `https://cdn.simpleicons.org/${s.icon}`;
+        img.alt = ""; img.loading = "lazy";
+        img.onerror = () => { tile.classList.add("skill-ic--mono"); tile.textContent = (s.title[lang] || "?").charAt(0); img.remove(); };
+        tile.appendChild(img);
+      }
+      const h = document.createElement("h3");
+      h.className = "price-title";
+      h.textContent = s.title[lang];
+      head.append(tile, h);
+
+      const p = document.createElement("p");
+      p.className = "price-desc";
+      p.textContent = s.desc[lang];
+
+      const tags = document.createElement("div");
+      tags.className = "card-tags";
+      (s.tags || []).forEach((t) => { const el = document.createElement("span"); el.textContent = t; tags.appendChild(el); });
+
+      const price = document.createElement("div");
+      price.className = "price-value";
+      const from = document.createElement("span");
+      from.className = "price-from";
+      from.textContent = I18N[lang].svc_from;
+      const amount = document.createElement("span");
+      amount.className = "price-amount";
+      amount.textContent = s.price;
+      price.append(from, amount);
+
+      card.append(head, p, tags, price);
+      wrap.appendChild(card);
+    });
+  }
+
+  /* ---- built-in projects ---- */
+  function renderProjects() {
+    const wrap = $("#project-grid");
+    if (!wrap) return;
+    wrap.innerHTML = "";
+    (CONTENT.projects || []).forEach((pr) => {
+      const card = document.createElement("article");
+      card.className = "card reveal";
+      const content = document.createElement("div");
+      content.className = "card-body";
+      const h = document.createElement("h3"); h.textContent = pr.title[lang];
+      const desc = document.createElement("p"); desc.textContent = pr.desc[lang];
+      content.append(h, desc);
+      if (Array.isArray(pr.tags) && pr.tags.length) {
+        const tags = document.createElement("div"); tags.className = "card-tags";
+        pr.tags.forEach((t) => { const s = document.createElement("span"); s.textContent = t; tags.appendChild(s); });
+        content.appendChild(tags);
+      }
+      card.appendChild(content);
+      wrap.appendChild(card);
+    });
+  }
+
   /* ---- extra (admin-added) projects ---- */
   function renderExtraProjects() {
     const wrap = $("#extra-projects");
@@ -237,7 +308,9 @@ window.App = (function () {
     renderTimeline();
     renderSkills();
     renderCapabilities();
+    renderServices();
     renderOdp();
+    renderProjects();
     renderExtraProjects();
     renderCertificates();
     renderGoals();
