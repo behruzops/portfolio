@@ -167,13 +167,19 @@ window.App = (function () {
 
       const price = document.createElement("div");
       price.className = "price-value";
-      const from = document.createElement("span");
-      from.className = "price-from";
-      from.textContent = I18N[lang].svc_from;
       const amount = document.createElement("span");
       amount.className = "price-amount";
-      amount.textContent = s.price;
-      price.append(from, amount);
+      if (typeof s.price === "string") {
+        const from = document.createElement("span");
+        from.className = "price-from";
+        from.textContent = I18N[lang].svc_from;
+        amount.textContent = s.price;
+        price.append(from, amount);
+      } else {
+        amount.classList.add("price-amount--custom");
+        amount.textContent = s.price[lang];
+        price.append(amount);
+      }
 
       card.append(head, p, tags, price);
       wrap.appendChild(card);
@@ -188,6 +194,14 @@ window.App = (function () {
     (CONTENT.projects || []).forEach((pr) => {
       const card = document.createElement("article");
       card.className = "card reveal";
+      if (pr.img) {
+        const media = document.createElement("div");
+        media.className = "card-media";
+        const img = document.createElement("img");
+        img.src = pr.img; img.alt = pr.title[lang]; img.loading = "lazy";
+        media.appendChild(img);
+        card.appendChild(media);
+      }
       const content = document.createElement("div");
       content.className = "card-body";
       const h = document.createElement("h3"); h.textContent = pr.title[lang];
@@ -197,6 +211,16 @@ window.App = (function () {
         const tags = document.createElement("div"); tags.className = "card-tags";
         pr.tags.forEach((t) => { const s = document.createElement("span"); s.textContent = t; tags.appendChild(s); });
         content.appendChild(tags);
+      }
+      if (Array.isArray(pr.links) && pr.links.length) {
+        const links = document.createElement("div"); links.className = "card-links";
+        pr.links.forEach((l) => {
+          const a = document.createElement("a");
+          a.className = "card-link"; a.href = l.url; a.target = "_blank"; a.rel = "noopener";
+          a.textContent = l.label + " ↗";
+          links.appendChild(a);
+        });
+        content.appendChild(links);
       }
       card.appendChild(content);
       wrap.appendChild(card);

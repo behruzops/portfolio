@@ -383,7 +383,7 @@ window.CONTENT = {
 
   services: [
     {
-      icon: "html5", price: "$150",
+      icon: "html5", price: "$50",
       title: { uz: "Landing / portfolio sayt", ru: "Landing / портфолио сайт", en: "Landing / portfolio site" },
       desc: {
         uz: "Bir sahifali zamonaviy, mobilga moslashgan, tez ishlaydigan sayt. Dizayn, animatsiya va SEO asoslari bilan.",
@@ -393,7 +393,7 @@ window.CONTENT = {
       tags: ["HTML/CSS/JS", "Responsive", "SEO"]
     },
     {
-      icon: "react", price: "$400",
+      icon: "react", price: "$200",
       title: { uz: "Ko'p sahifali / korporativ sayt", ru: "Многостраничный / корпоративный сайт", en: "Multi-page / corporate site" },
       desc: {
         uz: "Bir nechta sahifa, admin panel, ko'p tillilik va kontent boshqaruvi bilan to'liq korporativ sayt.",
@@ -403,7 +403,7 @@ window.CONTENT = {
       tags: ["Multi-page", "Admin panel", "i18n"]
     },
     {
-      icon: "telegram", price: "$120",
+      icon: "telegram", price: "$100",
       title: { uz: "Telegram bot", ru: "Telegram-бот", en: "Telegram bot" },
       desc: {
         uz: "Avtomatlashtirish, xabarnoma, buyurtma yoki hisob-kitob botlari. Baza va admin panel bilan bog'lanadi.",
@@ -413,7 +413,7 @@ window.CONTENT = {
       tags: ["Node.js", "Bot API", "Automation"]
     },
     {
-      icon: "grafana", price: "$300",
+      icon: "grafana", price: "$200",
       title: { uz: "Monitoring dashboard", ru: "Дашборд мониторинга", en: "Monitoring dashboard" },
       desc: {
         uz: "Server, baza va xizmatlar holatini real vaqtda ko'rsatuvchi panel + Telegram alert. Grafana yoki maxsus yechim.",
@@ -443,7 +443,7 @@ window.CONTENT = {
       tags: ["SQL tuning", "Indexing", "Migration"]
     },
     {
-      icon: "docker", price: "$150",
+      icon: "docker", price: "$100",
       title: { uz: "Docker / DevOps deployment", ru: "Docker / DevOps деплой", en: "Docker / DevOps deployment" },
       desc: {
         uz: "Ilovani konteynerlash, serverga joylash, domen/HTTPS sozlash va avtomatik ishga tushirish.",
@@ -453,7 +453,7 @@ window.CONTENT = {
       tags: ["Docker", "Nginx", "CI/CD"]
     },
     {
-      icon: "flutter", price: "$350",
+      icon: "flutter", price: "$299",
       title: { uz: "Mobil ilova (Android)", ru: "Мобильное приложение (Android)", en: "Mobile app (Android)" },
       desc: {
         uz: "Flutter'da Android ilova — API, AI yoki baza bilan. Tayyor APK va do'konga chiqarishga yordam.",
@@ -461,18 +461,160 @@ window.CONTENT = {
         en: "An Android app in Flutter — with API, AI or a database. Ready APK and help with store publishing."
       },
       tags: ["Flutter", "Android", "APK"]
+    },
+    {
+      icon: "asterisk", price: "$299",
+      title: { uz: "Call-markaz o'rnatish", ru: "Установка call-центра", en: "Call center setup" },
+      desc: {
+        uz: "Asterisk/VoIP asosida call-markaz — operatorlar, ichki raqamlar, qo'ng'iroqlarni yozib olish va statistika.",
+        ru: "Call-центр на базе Asterisk/VoIP — операторы, внутренние номера, запись звонков и статистика.",
+        en: "A call center on Asterisk/VoIP — agents, extensions, call recording and statistics."
+      },
+      tags: ["Asterisk", "VoIP", "Telephony"]
+    },
+    {
+      icon: "openai", price: "$499",
+      title: { uz: "AI call-markaz", ru: "AI call-центр", en: "AI call center" },
+      desc: {
+        uz: "Sun'iy intellektli call-markaz — AI operator qo'ng'iroqlarga javob beradi, ma'lumot yig'adi va yo'naltiradi. Doimiy qo'llab-quvvatlash bilan.",
+        ru: "Call-центр с ИИ — AI-оператор отвечает на звонки, собирает данные и маршрутизирует. С постоянной поддержкой.",
+        en: "An AI-powered call center — an AI agent answers calls, collects data and routes them. With ongoing support."
+      },
+      tags: ["AI", "Voice", "Automation"]
+    },
+    {
+      icon: "hikvision", price: { uz: "150 000 so'mdan", ru: "от 150 000 сум", en: "from 150,000 UZS" },
+      title: { uz: "Videokuzatuv (kamera) o'rnatish", ru: "Установка видеонаблюдения", en: "CCTV camera installation" },
+      desc: {
+        uz: "Videokuzatuv kameralarini o'rnatish va sozlash — har bir kamera nuqtasi uchun narx, masofadan ko'rish bilan.",
+        ru: "Установка и настройка камер видеонаблюдения — цена за каждую точку, с удалённым доступом.",
+        en: "CCTV camera installation and setup — priced per camera point, with remote viewing."
+      },
+      tags: ["CCTV", "Security", "Har nuqta"]
+    },
+    {
+      icon: "steam", price: { uz: "Kelishiladi", ru: "Договорная", en: "Custom quote" },
+      title: { uz: "Kompyuter klublar avtomatlashtirish", ru: "Автоматизация компьютерных клубов", en: "Gaming club automation" },
+      desc: {
+        uz: "Kompyuter klublar uchun server ko'tarish, o'yinlarni markazlashtirish va butun tizimni avtomatlashtirish.",
+        ru: "Для компьютерных клубов: поднятие сервера, централизация игр и автоматизация всей системы.",
+        en: "For gaming clubs: server setup, centralized games and full system automation."
+      },
+      tags: ["Server", "Gaming", "Automation"]
+    },
+    {
+      icon: "googlesheets", price: { uz: "Kelishiladi", ru: "Договорная", en: "Custom quote" },
+      title: { uz: "Buxgalterlar uchun moliyaviy tizimlar", ru: "Финансовые системы для бухгалтеров", en: "Financial systems for accountants" },
+      desc: {
+        uz: "Buxgalterlar uchun maxsus moliyaviy tizimlar — hisob-kitob, hisobotlar, avtomatlashtirish va integratsiyalar.",
+        ru: "Специальные финансовые системы для бухгалтеров — учёт, отчёты, автоматизация и интеграции.",
+        en: "Custom financial systems for accountants — bookkeeping, reports, automation and integrations."
+      },
+      tags: ["Finance", "Accounting", "Automation"]
+    },
+    {
+      icon: "uptimekuma", price: { uz: "Kelishiladi", ru: "Договорная", en: "Custom quote" },
+      title: { uz: "Oylik qo'llab-quvvatlash", ru: "Ежемесячная поддержка", en: "Monthly support" },
+      desc: {
+        uz: "Oylik texnik qo'llab-quvvatlash — tizimlaringizni kuzataman, muammo chiqsa tez ko'rib beraman, yangilanish va profilaktika. Hajmi o'zaro kelishiladi.",
+        ru: "Ежемесячная техподдержка — слежу за вашими системами, быстро реагирую на проблемы, обновления и профилактика. Объём обсуждается индивидуально.",
+        en: "Monthly technical support — I watch your systems, react to issues fast, plus updates and maintenance. Scope agreed individually."
+      },
+      tags: ["Support", "SLA", "Maintenance"]
     }
   ],
 
   projects: [
     {
+      img: "https://opengraph.githubassets.com/1/behruzops/oem-lite",
+      links: [{ label: "GitHub", url: "https://github.com/behruzops/oem-lite" }],
+      title: { uz: "OEM-Lite — Oracle/PostgreSQL kuzatuv", ru: "OEM-Lite — наблюдаемость Oracle/PostgreSQL", en: "OEM-Lite — Oracle/PostgreSQL observability" },
+      desc: {
+        uz: "Production DBA jamoalari uchun Oracle va PostgreSQL observability dashboardi. Docker'da ishlaydi.",
+        ru: "Дашборд наблюдаемости Oracle и PostgreSQL для production DBA-команд. Работает в Docker.",
+        en: "An Oracle & PostgreSQL observability dashboard for production DBA teams. Runs in Docker."
+      },
+      tags: ["Oracle", "PostgreSQL", "Docker"]
+    },
+    {
+      img: "https://opengraph.githubassets.com/1/behruzops/orionwatch",
+      links: [{ label: "GitHub", url: "https://github.com/behruzops/orionwatch" }],
       title: { uz: "OrionWatch — monitoring paneli", ru: "OrionWatch — панель мониторинга", en: "OrionWatch — monitoring panel" },
       desc: {
-        uz: "Docker konteynerlar va portlarni kuzatuvchi cross-platform dashboard. Docker image sifatida tarqatiladi, bitta oynadan boshqariladi.",
-        ru: "Кросс-платформенный дашборд для мониторинга Docker-контейнеров и портов. Распространяется как Docker-образ, управление из одного окна.",
-        en: "A cross-platform dashboard for monitoring Docker containers and ports. Shipped as a Docker image, managed from a single screen."
+        uz: "Local loyihalar, portlar va Docker konteynerlarni bitta oynadan kuzatuvchi cross-platform panel.",
+        ru: "Кросс-платформенная панель для мониторинга локальных проектов, портов и Docker-контейнеров из одного окна.",
+        en: "A cross-platform panel that monitors local projects, ports and Docker containers from one screen."
       },
       tags: ["Docker", "Node.js", "Monitoring"]
+    },
+    {
+      img: "https://opengraph.githubassets.com/1/behruzops/dockerops",
+      links: [{ label: "GitHub", url: "https://github.com/behruzops/dockerops" }],
+      title: { uz: "DockerOps — boshqaruv konsoli", ru: "DockerOps — консоль управления", en: "DockerOps — operations console" },
+      desc: {
+        uz: "Docker/Swarm boshqaruv konsoli — jonli loglar, stack muharriri va konteyner boshqaruvi.",
+        ru: "Консоль управления Docker/Swarm — живые логи, редактор стеков и управление контейнерами.",
+        en: "A Docker/Swarm operations console with live logs, a stack editor and container management."
+      },
+      tags: ["Docker", "Swarm", "DevOps"]
+    },
+    {
+      img: "https://opengraph.githubassets.com/1/behruzops/logstream",
+      links: [{ label: "GitHub", url: "https://github.com/behruzops/logstream" }],
+      title: { uz: "LogStream — log agregatori", ru: "LogStream — агрегатор логов", en: "LogStream — log aggregator" },
+      desc: {
+        uz: "Real vaqt log yig'uvchi — jonli tail va Lucene uslubidagi qidiruv. ELK'ga yengil muqobil.",
+        ru: "Агрегатор логов в реальном времени — live tail и запросы в стиле Lucene. Лёгкая замена ELK.",
+        en: "A real-time log aggregator with live tail and Lucene-style queries. A lightweight ELK alternative."
+      },
+      tags: ["Logging", "Observability", "SRE"]
+    },
+    {
+      img: "https://opengraph.githubassets.com/1/behruzops/statuspage",
+      links: [{ label: "GitHub", url: "https://github.com/behruzops/statuspage" }],
+      title: { uz: "StatusPage — uptime status sahifasi", ru: "StatusPage — страница статуса", en: "StatusPage — uptime status page" },
+      desc: {
+        uz: "O'zingiz joylaydigan ochiq uptime status sahifasi — insidentlar tarixi (timeline) bilan.",
+        ru: "Self-hosted публичная страница статуса аптайма — с таймлайном инцидентов.",
+        en: "A self-hosted public uptime status page with an incident timeline."
+      },
+      tags: ["Uptime", "SRE", "Self-hosted"]
+    },
+    {
+      img: "https://opengraph.githubassets.com/1/behruzops/deployflow",
+      links: [{ label: "GitHub", url: "https://github.com/behruzops/deployflow" }],
+      title: { uz: "DeployFlow — CI/CD vizualizator", ru: "DeployFlow — визуализатор CI/CD", en: "DeployFlow — CI/CD visualizer" },
+      desc: {
+        uz: "CI/CD pipeline vizualizatori — DORA metrikalari bilan, o'zingiz joylaysiz.",
+        ru: "Self-hosted визуализатор CI/CD-пайплайнов с DORA-метриками.",
+        en: "A self-hosted CI/CD pipeline visualizer with DORA metrics."
+      },
+      tags: ["CI/CD", "DevOps", "DORA"]
+    },
+    {
+      img: "https://opengraph.githubassets.com/1/behruzops/cloudcost",
+      links: [{ label: "GitHub", url: "https://github.com/behruzops/cloudcost" }],
+      title: { uz: "CloudCost — FinOps analitika", ru: "CloudCost — FinOps аналитика", en: "CloudCost — FinOps analytics" },
+      desc: {
+        uz: "Multi-cloud FinOps analitikasi — anomaliyalarni aniqlash va tejash tavsiyalari (AWS/Azure/GCP).",
+        ru: "Multi-cloud FinOps-аналитика — обнаружение аномалий и подсказки по экономии (AWS/Azure/GCP).",
+        en: "Multi-cloud FinOps analytics with anomaly detection and savings hints (AWS/Azure/GCP)."
+      },
+      tags: ["FinOps", "AWS", "GCP"]
+    },
+    {
+      img: "https://opengraph.githubassets.com/1/behruzops/orionsystems",
+      links: [
+        { label: "Demo", url: "http://orionsystem.uz/" },
+        { label: "GitHub", url: "https://github.com/behruzops/orionsystems" }
+      ],
+      title: { uz: "OrionSystems — kompaniya sayti", ru: "OrionSystems — сайт компании", en: "OrionSystems — company website" },
+      desc: {
+        uz: "IT, DevOps va monitoring kompaniyasi veb-sayti (UZ/RU/EN). Jonli: orionsystem.uz.",
+        ru: "Сайт IT / DevOps / мониторинг-компании (UZ/RU/EN). Онлайн: orionsystem.uz.",
+        en: "Website for an IT, DevOps & monitoring company (UZ/RU/EN). Live at orionsystem.uz."
+      },
+      tags: ["Website", "i18n", "Company"]
     },
     {
       title: { uz: "AZS smena tizimi", ru: "Система смен АЗС", en: "Fuel-station shift system" },
