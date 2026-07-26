@@ -466,15 +466,6 @@ window.CONTENT = {
 
   projects: [
     {
-      title: { uz: "RoboDeutsch & RoboEnglish", ru: "RoboDeutsch & RoboEnglish", en: "RoboDeutsch & RoboEnglish" },
-      desc: {
-        uz: "AI tutor bilan til o'rganish ilovalari (nemis va ingliz, 0→C1/IELTS). Speaking-birinchi metod, SRS takrorlash, 6000+ so'z, tayyor APK.",
-        ru: "Приложения для изучения языков с AI-репетитором (немецкий и английский, 0→C1/IELTS). Метод speaking-first, SRS-повторение, 6000+ слов, готовый APK.",
-        en: "Language-learning apps with an AI tutor (German & English, 0→C1/IELTS). Speaking-first method, SRS review, 6000+ words, ready APK."
-      },
-      tags: ["Flutter", "AI tutor", "APK"]
-    },
-    {
       title: { uz: "OrionWatch — monitoring paneli", ru: "OrionWatch — панель мониторинга", en: "OrionWatch — monitoring panel" },
       desc: {
         uz: "Docker konteynerlar va portlarni kuzatuvchi cross-platform dashboard. Docker image sifatida tarqatiladi, bitta oynadan boshqariladi.",
