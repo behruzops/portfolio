@@ -456,7 +456,6 @@ window.App = (function () {
     renderProjects();
     renderExtraProjects();
     renderCertificates();
-    renderGoals();
     observeReveals();
   }
 
