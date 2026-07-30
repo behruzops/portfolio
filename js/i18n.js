@@ -324,6 +324,14 @@ window.CONTENT = {
       ]
     },
     {
+      title: { uz: "Sun'iy intellekt (AI)", ru: "Искусственный интеллект", en: "Artificial intelligence" },
+      items: [
+        { name: "Agentic AI", slug: "openai" },
+        { name: "Gemini API", slug: "googlegemini" },
+        { name: "AI botlar / RAG", slug: "openai" }
+      ]
+    },
+    {
       title: { uz: "Konteyner texnologiyalari", ru: "Контейнеры", en: "Containers" },
       items: [
         { name: "Docker", slug: "docker" },
@@ -838,7 +846,8 @@ window.CONTENT = {
     { value: 90, label: { uz: "Monitoring", ru: "Мониторинг", en: "Monitoring" } },
     { value: 82, label: { uz: "Docker / DevOps", ru: "Docker / DevOps", en: "Docker / DevOps" } },
     { value: 86, label: { uz: "Avtomatlashtirish", ru: "Автоматизация", en: "Automation" } },
-    { value: 80, label: { uz: "Web / Bot", ru: "Web / Боты", en: "Web / Bots" } }
+    { value: 80, label: { uz: "Web / Bot", ru: "Web / Боты", en: "Web / Bots" } },
+    { value: 75, label: { uz: "AI", ru: "AI", en: "AI" } }
   ],
 
   goals: {
