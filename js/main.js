@@ -74,6 +74,77 @@ window.App = (function () {
     });
   }
 
+  /* ---- stats (animated count-up) ---- */
+  function renderStats() {
+    const wrap = $("#stats-strip");
+    if (!wrap) return;
+    wrap.innerHTML = "";
+    (CONTENT.stats || []).forEach((s) => {
+      const tile = document.createElement("div");
+      tile.className = "stat-tile reveal";
+      const num = document.createElement("div");
+      num.className = "stat-num";
+      num.dataset.target = s.n; num.dataset.suffix = s.suffix || "";
+      const label = document.createElement("div");
+      label.className = "stat-label";
+      label.textContent = I18N[lang][s.key] || "";
+      const counted = wrap.dataset.counted === "1";
+      num.textContent = (counted ? s.n : 0) + (s.suffix || "");
+      tile.append(num, label);
+      wrap.appendChild(tile);
+    });
+    if (wrap.dataset.counted !== "1") {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) { countUp(wrap); wrap.dataset.counted = "1"; io.disconnect(); }
+        });
+      }, { threshold: 0.35 });
+      io.observe(wrap);
+    }
+  }
+  function countUp(wrap) {
+    wrap.querySelectorAll(".stat-num").forEach((el) => {
+      const target = parseInt(el.dataset.target, 10) || 0;
+      const suffix = el.dataset.suffix || "";
+      const dur = 1300, start = performance.now();
+      (function tick(now) {
+        const p = Math.min(1, (now - start) / dur);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      })(start);
+    });
+  }
+
+  /* ---- skills radar chart (pure SVG) ---- */
+  function renderRadar() {
+    const host = $("#skill-radar");
+    if (!host) return;
+    const data = CONTENT.radar || [];
+    const n = data.length;
+    if (!n) { host.innerHTML = ""; return; }
+    const size = 300, cx = size / 2, cy = size / 2, R = 90;
+    const ang = (i) => (-90 + i * 360 / n) * Math.PI / 180;
+    const pt = (i, r) => [cx + r * Math.cos(ang(i)), cy + r * Math.sin(ang(i))];
+    let svg = `<svg viewBox="0 0 ${size} ${size}" class="radar-svg" role="img" aria-label="skills radar">`;
+    [0.25, 0.5, 0.75, 1].forEach((f) => {
+      const pts = data.map((_, i) => pt(i, R * f).map((v) => v.toFixed(1)).join(",")).join(" ");
+      svg += `<polygon class="radar-ring" points="${pts}" />`;
+    });
+    data.forEach((d, i) => {
+      const [x, y] = pt(i, R);
+      svg += `<line class="radar-axis" x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" />`;
+      const [lx, ly] = pt(i, R + 18);
+      const anchor = Math.abs(lx - cx) < 8 ? "middle" : (lx > cx ? "start" : "end");
+      svg += `<text class="radar-label" x="${lx.toFixed(1)}" y="${(ly + 4).toFixed(1)}" text-anchor="${anchor}">${d.label[lang]}</text>`;
+    });
+    const dpts = data.map((d, i) => pt(i, R * d.value / 100).map((v) => v.toFixed(1)).join(",")).join(" ");
+    svg += `<polygon class="radar-area" points="${dpts}" />`;
+    data.forEach((d, i) => { const [x, y] = pt(i, R * d.value / 100); svg += `<circle class="radar-dot" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.6" />`; });
+    svg += `</svg>`;
+    host.innerHTML = svg;
+  }
+
   /* ---- timeline ---- */
   function renderTimeline() {
     const tl = $("#timeline");
@@ -257,42 +328,88 @@ window.App = (function () {
     });
   }
 
-  /* ---- certificates (built-in + admin) ---- */
+  /* ---- certificates carousel (built-in + admin) ---- */
+  let certTimer = null;
+  let certResize = null;
   function renderCertificates() {
-    const grid = $("#cert-grid");
-    grid.innerHTML = "";
+    const track = $("#cert-track");
+    const dotsWrap = $("#cert-dots");
+    const viewport = $(".cert-viewport");
+    const carousel = $("#cert-carousel");
+    if (!track) return;
+    track.innerHTML = ""; dotsWrap.innerHTML = "";
     const all = CONTENT.certificates.concat(Store.data.certificates);
-    all.forEach((c) => {
+    let index = 0;
+
+    all.forEach((c, i) => {
       const card = document.createElement("article");
-      card.className = "cert-card reveal";
+      card.className = "cert-card";
       const media = document.createElement("a");
       media.className = "cert-media";
-      media.href = c.file || c.img;
-      media.target = "_blank"; media.rel = "noopener";
+      media.href = c.file || c.img; media.target = "_blank"; media.rel = "noopener";
       const img = document.createElement("img");
-      img.src = c.img; img.alt = (c.title || "certificate") + " certificate"; img.loading = "lazy";
+      img.src = c.img; img.alt = (c.title || "certificate"); img.loading = "lazy";
       media.appendChild(img);
       const body = document.createElement("div");
       body.className = "cert-body";
       const h = document.createElement("h3"); h.textContent = c.title || "";
       const meta = document.createElement("div"); meta.className = "cert-meta";
-      const parts = [c.issuer, c.date].filter(Boolean);
-      meta.textContent = parts.join(" · ");
+      meta.textContent = [c.issuer, c.date].filter(Boolean).join(" · ");
       const view = document.createElement("a");
-      view.className = "cert-view";
-      view.href = c.file || c.img; view.target = "_blank"; view.rel = "noopener";
+      view.className = "cert-view"; view.href = c.file || c.img; view.target = "_blank"; view.rel = "noopener";
       view.textContent = I18N[lang].cert_view;
       body.append(h, meta, view);
       card.append(media, body);
-      grid.appendChild(card);
+      card.addEventListener("click", (e) => { if (!e.target.closest("a")) go(i); });
+      track.appendChild(card);
+
+      const dot = document.createElement("button");
+      dot.className = "cert-dot"; dot.setAttribute("aria-label", "sertifikat " + (i + 1));
+      dot.addEventListener("click", () => go(i));
+      dotsWrap.appendChild(dot);
     });
+
+    const cards = Array.from(track.children);
+    const dots = Array.from(dotsWrap.children);
+    const single = cards.length <= 1;
+    carousel.classList.toggle("single", single);
+
+    function layout() {
+      if (single) { track.style.transform = "none"; return; }
+      const card = cards[index];
+      if (!card) return;
+      const x = viewport.clientWidth / 2 - (card.offsetLeft + card.offsetWidth / 2);
+      track.style.transform = "translateX(" + x + "px)";
+      cards.forEach((c, i) => c.classList.toggle("active", i === index));
+      dots.forEach((d, i) => d.classList.toggle("on", i === index));
+    }
+    function go(i) { index = (i + cards.length) % cards.length; layout(); restart(); }
+    function restart() {
+      if (certTimer) clearInterval(certTimer);
+      if (!single) certTimer = setInterval(() => go(index + 1), 4500);
+    }
+
+    $("#cert-prev").onclick = () => go(index - 1);
+    $("#cert-next").onclick = () => go(index + 1);
+    carousel.onmouseenter = () => { if (certTimer) clearInterval(certTimer); };
+    carousel.onmouseleave = restart;
+
+    if (certResize) window.removeEventListener("resize", certResize);
+    certResize = layout;
+    window.addEventListener("resize", certResize);
+
+    layout();
+    requestAnimationFrame(() => requestAnimationFrame(layout));
+    setTimeout(layout, 80);
+    restart();
   }
 
   /* ---- goals ---- */
   function renderGoals() {
     const grid = $("#goals-grid");
     grid.innerHTML = "";
-    CONTENT.goals[lang].forEach((g, i) => {
+    const all = (CONTENT.goals[lang] || []).concat(Store.data.goals || []);
+    all.forEach((g, i) => {
       const item = document.createElement("div");
       item.className = "goal reveal";
       const num = document.createElement("span");
@@ -329,8 +446,10 @@ window.App = (function () {
   function renderAll() {
     applyStatic();
     renderNote();
+    renderStats();
     renderTimeline();
     renderSkills();
+    renderRadar();
     renderCapabilities();
     renderServices();
     renderOdp();

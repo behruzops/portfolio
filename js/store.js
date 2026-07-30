@@ -17,7 +17,8 @@ window.Store = (function () {
       return {
         message: typeof d.message === "string" ? d.message : "",
         projects: Array.isArray(d.projects) ? d.projects : [],
-        certificates: Array.isArray(d.certificates) ? d.certificates : []
+        certificates: Array.isArray(d.certificates) ? d.certificates : [],
+        goals: Array.isArray(d.goals) ? d.goals : []
       };
     },
     set(partial) {

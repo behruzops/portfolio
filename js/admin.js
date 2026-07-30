@@ -27,6 +27,7 @@
     fillMessage();
     renderProjList();
     renderCertList();
+    renderGoalList();
   }
 
   $("#admin-open").addEventListener("click", open);
@@ -177,6 +178,40 @@
     }
   });
 
+  /* ---- goals / directions ---- */
+  function renderGoalList() {
+    const list = $("#adm-goal-list");
+    if (!list) return;
+    list.innerHTML = "";
+    const goals = Store.data.goals;
+    if (!goals.length) { list.innerHTML = '<p class="admin-empty">Qo\'shimcha yo\'nalish yo\'q.</p>'; return; }
+    goals.forEach((g, i) => {
+      const row = document.createElement("div");
+      row.className = "admin-item";
+      const span = document.createElement("span");
+      span.textContent = g;
+      const del = document.createElement("button");
+      del.className = "admin-del"; del.textContent = "O'chirish";
+      del.addEventListener("click", () => {
+        const arr = Store.data.goals; arr.splice(i, 1);
+        safeSave({ goals: arr }); renderGoalList(); App.refresh();
+      });
+      row.append(span, del);
+      list.appendChild(row);
+    });
+  }
+  const goalAddBtn = $("#adm-goal-add");
+  if (goalAddBtn) goalAddBtn.addEventListener("click", () => {
+    const text = $("#adm-goal-text").value.trim();
+    if (!text) { alert("Yo'nalish matnini kiriting."); return; }
+    const arr = Store.data.goals;
+    arr.push(text);
+    if (safeSave({ goals: arr })) {
+      $("#adm-goal-text").value = "";
+      renderGoalList(); App.refresh();
+    }
+  });
+
   /* ---- data: export / import / clear ---- */
   $("#adm-export").addEventListener("click", () => {
     const blob = new Blob([JSON.stringify(Store.data, null, 2)], { type: "application/json" });
@@ -194,7 +229,7 @@
       try {
         const data = JSON.parse(reader.result);
         Store.replace(data);
-        fillMessage(); renderProjList(); renderCertList(); App.refresh();
+        fillMessage(); renderProjList(); renderCertList(); renderGoalList(); App.refresh();
         alert("Import qilindi ✓");
       } catch (err) { alert("Faylni o'qib bo'lmadi (noto'g'ri JSON)."); }
     };

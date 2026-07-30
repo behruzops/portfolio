@@ -62,6 +62,12 @@ window.I18N = {
 
     goals_kicker: "09 — Yo'nalish",
     goals_title: "Maqsadlarim",
+    stats_title: "Raqamlarda",
+    stats_projects: "Loyihalar",
+    stats_services: "Xizmatlar",
+    stats_tech: "Texnologiyalar",
+    stats_years: "Yil tajriba",
+    radar_title: "Kuchli tomonlar",
 
     contact_title: "Bog'lanish",
     contact_sub: "Hamkorlik yoki savollar uchun bemalol yozing.",
@@ -129,6 +135,12 @@ window.I18N = {
 
     goals_kicker: "09 — Направление",
     goals_title: "Мои цели",
+    stats_title: "В цифрах",
+    stats_projects: "Проектов",
+    stats_services: "Услуг",
+    stats_tech: "Технологий",
+    stats_years: "Лет опыта",
+    radar_title: "Сильные стороны",
 
     contact_title: "Связаться",
     contact_sub: "Пишите по вопросам сотрудничества или с любыми вопросами.",
@@ -196,6 +208,12 @@ window.I18N = {
 
     goals_kicker: "09 — Direction",
     goals_title: "My goals",
+    stats_title: "By the numbers",
+    stats_projects: "Projects",
+    stats_services: "Services",
+    stats_tech: "Technologies",
+    stats_years: "Years experience",
+    radar_title: "Core strengths",
 
     contact_title: "Get in touch",
     contact_sub: "Feel free to reach out for collaboration or any questions.",
@@ -806,6 +824,22 @@ window.CONTENT = {
     ru: "Люблю работать над реальными проектами в области мониторинга и инфраструктуры. Моя цель — строить надёжные, наблюдаемые и автоматизированные системы.",
     en: "I enjoy working on real projects in monitoring and infrastructure. My goal is to build reliable, observable and automated systems."
   },
+
+  stats: [
+    { n: 12, suffix: "+", key: "stats_projects" },
+    { n: 25, suffix: "", key: "stats_services" },
+    { n: 20, suffix: "+", key: "stats_tech" },
+    { n: 3, suffix: "+", key: "stats_years" }
+  ],
+
+  radar: [
+    { value: 92, label: { uz: "Linux", ru: "Linux", en: "Linux" } },
+    { value: 88, label: { uz: "Oracle / DB", ru: "Oracle / БД", en: "Oracle / DB" } },
+    { value: 90, label: { uz: "Monitoring", ru: "Мониторинг", en: "Monitoring" } },
+    { value: 82, label: { uz: "Docker / DevOps", ru: "Docker / DevOps", en: "Docker / DevOps" } },
+    { value: 86, label: { uz: "Avtomatlashtirish", ru: "Автоматизация", en: "Automation" } },
+    { value: 80, label: { uz: "Web / Bot", ru: "Web / Боты", en: "Web / Bots" } }
+  ],
 
   goals: {
     uz: [
