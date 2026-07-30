@@ -541,7 +541,7 @@ window.CONTENT = {
       tags: ["Support", "SLA", "Maintenance"]
     },
     {
-      icon: "googlegemini", price: "$300",
+      icon: "googlegemini", price: "$149",
       title: { uz: "AI chatbot (bilim bazasi)", ru: "AI чат-бот (база знаний)", en: "AI chatbot (knowledge base)" },
       desc: {
         uz: "Sayt uchun AI chatbot — kompaniya hujjatlari va ma'lumotlaridan javob beradi (RAG).",
@@ -551,7 +551,7 @@ window.CONTENT = {
       tags: ["AI", "RAG", "Gemini"]
     },
     {
-      icon: "telegram", price: "$250",
+      icon: "telegram", price: "$99",
       title: { uz: "CRM + Telegram lead bot", ru: "CRM + Telegram lead-бот", en: "CRM + Telegram lead bot" },
       desc: {
         uz: "Mijozlar bazasi + so'rovlarni Telegram bot orqali yig'ish, holat va izohlar bilan boshqarish.",
@@ -561,7 +561,7 @@ window.CONTENT = {
       tags: ["CRM", "Telegram", "Leads"]
     },
     {
-      icon: "twilio", price: "$150",
+      icon: "twilio", price: "$99",
       title: { uz: "SMS / xabarnoma gateway", ru: "SMS / рассылка", en: "SMS / notification gateway" },
       desc: {
         uz: "Kontaktlar ro'yxatiga ommaviy SMS (Eskiz.uz) va Telegram xabarlar yuborish paneli.",
@@ -571,7 +571,7 @@ window.CONTENT = {
       tags: ["SMS", "Telegram", "Broadcast"]
     },
     {
-      icon: "qrcode", price: "$150",
+      icon: "qrcode", price: "$99",
       title: { uz: "QR-menyu + buyurtma", ru: "QR-меню + заказы", en: "QR menu + ordering" },
       desc: {
         uz: "Stolga QR → mijoz menyuni ko'radi va buyurtma beradi → oshxona ekraniga real vaqtda tushadi.",
@@ -611,7 +611,7 @@ window.CONTENT = {
       tags: ["Queue", "Display", "Operator"]
     },
     {
-      icon: "fitbit", price: "$200",
+      icon: "fitbit", price: "$199",
       title: { uz: "Fitnes zal a'zolik tizimi", ru: "Система абонементов фитнес-зала", en: "Gym membership system" },
       desc: {
         uz: "A'zolar, karta/obuna, kirish nazorati (check-in), obuna muddati va tugash ogohlantirishlari.",
@@ -621,7 +621,7 @@ window.CONTENT = {
       tags: ["Membership", "Check-in", "Cards"]
     },
     {
-      icon: "prometheus", price: "$200",
+      icon: "prometheus", price: "$149",
       title: { uz: "Server monitoring + Telegram alert", ru: "Мониторинг серверов + Telegram-алерты", en: "Server monitoring + Telegram alerts" },
       desc: {
         uz: "Prometheus + Grafana + Alertmanager — CPU/RAM/disk kuzatuvi va Telegram ogohlantirish, bir buyruq bilan.",
@@ -641,7 +641,7 @@ window.CONTENT = {
       tags: ["Backup", "Cron", "Cloud"]
     },
     {
-      icon: "uptimekuma", price: "$100",
+      icon: "uptimekuma", price: "$99",
       title: { uz: "Uptime status sahifasi", ru: "Страница статуса (uptime)", en: "Uptime status page" },
       desc: {
         uz: "Servislaringiz ishlayaptimi — ochiq status sahifasi, uptime foizi va insidentlar tarixi bilan.",
