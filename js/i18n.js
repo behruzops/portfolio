@@ -52,6 +52,7 @@ window.I18N = {
     svc_from: "dan boshlab",
     svc_note: "Narxlar taxminiy va kelishiladi. Bepul maslahat uchun bemalol yozing.",
     svc_cta: "Buyurtma / maslahat",
+    svc_details: "Batafsil ko'rish",
 
     process_kicker: "Hamkorlik jarayoni",
     process_title: "G'oyadan ishlaydigan tizimgacha",
@@ -143,6 +144,7 @@ window.I18N = {
     svc_from: "от",
     svc_note: "Цены ориентировочные и обсуждаются. Пишите за бесплатной консультацией.",
     svc_cta: "Заказать / консультация",
+    svc_details: "Подробнее",
 
     process_kicker: "Процесс работы",
     process_title: "От идеи до работающей системы",
@@ -234,6 +236,7 @@ window.I18N = {
     svc_from: "from",
     svc_note: "Prices are indicative and negotiable. Reach out for a free consultation.",
     svc_cta: "Order / consult",
+    svc_details: "View details",
 
     process_kicker: "Working process",
     process_title: "From idea to a working system",

@@ -375,8 +375,33 @@ window.App = (function () {
         price.append(amount);
       }
 
+      const detailRoutes = {
+        telegram: "telegram-bot/",
+        grafana: "server-monitoring/",
+        prometheus: "server-monitoring/",
+        oracle: "oracle-dba/",
+        postgresql: "oracle-dba/",
+        openai: "ai-automation/",
+        googlegemini: "ai-automation/",
+        qrcode: "business-systems/",
+        square: "business-systems/",
+        googlecalendar: "business-systems/",
+        queue: "business-systems/",
+        fitbit: "business-systems/"
+      };
+      const detailHref = detailRoutes[s.icon];
+      let detailLink = null;
+      if (detailHref) {
+        detailLink = document.createElement("a");
+        detailLink.className = "price-link";
+        detailLink.href = detailHref;
+        detailLink.textContent = I18N[lang].svc_details + "  →";
+        detailLink.setAttribute("aria-label", `${s.title[lang]} — ${I18N[lang].svc_details}`);
+      }
+
       card.style.setProperty("--service-index", String(wrap.children.length));
       card.append(head, p, tags, price);
+      if (detailLink) card.appendChild(detailLink);
       wrap.appendChild(card);
     });
   }

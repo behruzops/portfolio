@@ -596,6 +596,8 @@ a { color: inherit; text-decoration: none; }
 }
 .price-amount--custom { font-size: 18px; }
 .svc-note { margin-top: 22px; text-align: center; color: var(--muted-2); font-size: 13.5px; }
+.price-link { display:inline-flex; align-items:center; gap:8px; width:max-content; margin-top:4px; color:var(--cyan-2); font-size:13px; font-weight:800; letter-spacing:.02em; text-decoration:none; transition:color .25s,transform .25s,text-shadow .25s; }
+.price-link:hover,.price-link:focus-visible { color:#fff; transform:translateX(4px); text-shadow:0 0 16px rgba(56,189,248,.85); }
 .svc-cta-wrap { margin-top: 22px; display: flex; justify-content: center; }
 
 /* ===== Client-friendly work process ===== */
