@@ -18,6 +18,10 @@ window.I18N = {
     hero_projects_btn: "Loyihalarim",
     hero_resume_btn: "Rezyume (PDF)",
     views_label: "tashrif",
+    showcase_kicker: "Tayyor yechimlar",
+    showcase_title: "Biznesingizni keyingi bosqichga olib chiqamiz",
+    showcase_sub: "Monitoring, AI va avtomatlashtirish — bitta ishonchli hamkor bilan.",
+    showcase_open: "Batafsil ko'rish",
 
     about_kicker: "01 — Profil",
     about_title: "Men haqimda",
@@ -31,7 +35,7 @@ window.I18N = {
     edu_kicker: "03 — Ta'lim",
     edu_title: "Ta'lim",
     edu_uni: "Toshkent davlat iqtisodiyot universiteti",
-    edu_status: "4-kurs talabasi · 2026-yilda bitiradi",
+    edu_status: "Bitirgan · 2026",
     edu_period: "2022 — 2026",
 
     skills_kicker: "04 — Stack",
@@ -91,6 +95,10 @@ window.I18N = {
     hero_projects_btn: "Мои проекты",
     hero_resume_btn: "Резюме (PDF)",
     views_label: "визитов",
+    showcase_kicker: "Готовые решения",
+    showcase_title: "Выводим ваш бизнес на новый уровень",
+    showcase_sub: "Мониторинг, AI и автоматизация — с одним надежным партнером.",
+    showcase_open: "Подробнее",
 
     about_kicker: "01 — Профиль",
     about_title: "Обо мне",
@@ -104,7 +112,7 @@ window.I18N = {
     edu_kicker: "03 — Образование",
     edu_title: "Образование",
     edu_uni: "Ташкентский государственный экономический университет",
-    edu_status: "Студент 4 курса · выпуск в 2026 году",
+    edu_status: "Выпускник · 2026",
     edu_period: "2022 — 2026",
 
     skills_kicker: "04 — Стек",
@@ -164,6 +172,10 @@ window.I18N = {
     hero_projects_btn: "My projects",
     hero_resume_btn: "Resume (PDF)",
     views_label: "visits",
+    showcase_kicker: "Ready solutions",
+    showcase_title: "Take your business to the next level",
+    showcase_sub: "Monitoring, AI and automation — delivered by one reliable partner.",
+    showcase_open: "Explore service",
 
     about_kicker: "01 — Profile",
     about_title: "About me",
@@ -177,7 +189,7 @@ window.I18N = {
     edu_kicker: "03 — Education",
     edu_title: "Education",
     edu_uni: "Tashkent State University of Economics",
-    edu_status: "4th-year student · graduating in 2026",
+    edu_status: "Graduate · 2026",
     edu_period: "2022 — 2026",
 
     skills_kicker: "04 — Stack",
@@ -223,6 +235,69 @@ window.I18N = {
 
 /* ===== structured content ===== */
 window.CONTENT = {
+  showcase: [
+    {
+      kind: "monitoring", href: "#services",
+      label: { uz: "Monitoring", ru: "Мониторинг", en: "Monitoring" },
+      title: { uz: "24/7 monitoring va tezkor alert", ru: "Мониторинг 24/7 и мгновенные оповещения", en: "24/7 monitoring and instant alerts" },
+      desc: {
+        uz: "Server, baza va xizmatlarning holatini bitta panelda kuzating. Muammo yuz bersa Telegram orqali darhol xabar oling.",
+        ru: "Контролируйте серверы, базы и сервисы в одном окне. При проблеме сразу получайте уведомление в Telegram.",
+        en: "Watch servers, databases and services from one panel. Get an immediate Telegram alert when something goes wrong."
+      },
+      metric: "< 60 sec", metricLabel: { uz: "alert vaqti", ru: "до оповещения", en: "alert time" },
+      tags: ["Prometheus", "Grafana", "Telegram"]
+    },
+    {
+      kind: "ai", href: "#services",
+      label: { uz: "AI yechimlar", ru: "AI-решения", en: "AI solutions" },
+      title: { uz: "AI operator va bilim bazali chatbot", ru: "AI-оператор и чат-бот с базой знаний", en: "AI operator and knowledge-base chatbot" },
+      desc: {
+        uz: "Mijoz savollariga 24/7 javob beradigan, biznesingiz ma'lumotlari bilan ishlaydigan aqlli yordamchi.",
+        ru: "Умный помощник, который отвечает клиентам 24/7 и работает на знаниях вашего бизнеса.",
+        en: "A smart assistant that answers customers 24/7 using your own business knowledge."
+      },
+      metric: "24/7", metricLabel: { uz: "doim aloqada", ru: "всегда на связи", en: "always available" },
+      tags: ["Agentic AI", "RAG", "Gemini"]
+    },
+    {
+      kind: "automation", href: "#services",
+      label: { uz: "Avtomatlashtirish", ru: "Автоматизация", en: "Automation" },
+      title: { uz: "Takroriy ishlarni tizimga topshiring", ru: "Передайте рутинные задачи системе", en: "Let the system handle repetitive work" },
+      desc: {
+        uz: "Telegram botlar, backup, hisobot va deployment jarayonlarini avtomatik va nazoratli ishlaydigan qilamiz.",
+        ru: "Автоматизируем Telegram-боты, резервное копирование, отчеты и процессы развертывания.",
+        en: "Automate Telegram bots, backups, reporting and deployment workflows with full visibility."
+      },
+      metric: "1 click", metricLabel: { uz: "ishga tushirish", ru: "для запуска", en: "to launch" },
+      tags: ["Docker", "CI/CD", "Bots"]
+    },
+    {
+      kind: "business", href: "#services",
+      label: { uz: "Biznes tizimlar", ru: "Бизнес-системы", en: "Business systems" },
+      title: { uz: "Savdo, ombor va mijozlar — bitta joyda", ru: "Продажи, склад и клиенты — в одном месте", en: "Sales, inventory and customers in one place" },
+      desc: {
+        uz: "POS, CRM, QR-menyu, booking va a'zolik tizimlari biznes jarayonlaringizga moslab quriladi.",
+        ru: "POS, CRM, QR-меню, бронирование и системы абонементов под ваши процессы.",
+        en: "POS, CRM, QR menu, booking and membership systems tailored to your workflow."
+      },
+      metric: "Real-time", metricLabel: { uz: "hisobotlar", ru: "отчеты", en: "reporting" },
+      tags: ["POS", "CRM", "Analytics"]
+    },
+    {
+      kind: "database", href: "#services",
+      label: { uz: "Database", ru: "Базы данных", en: "Database" },
+      title: { uz: "Oracle va PostgreSQL uchun ishonchli infratuzilma", ru: "Надежная инфраструктура Oracle и PostgreSQL", en: "Reliable Oracle and PostgreSQL infrastructure" },
+      desc: {
+        uz: "O'rnatish, optimizatsiya, migratsiya, backup va uzluksiz monitoring — production talablariga mos.",
+        ru: "Установка, оптимизация, миграция, резервное копирование и мониторинг для production-среды.",
+        en: "Installation, optimization, migration, backup and continuous monitoring for production environments."
+      },
+      metric: "99.9%", metricLabel: { uz: "barqarorlik maqsadi", ru: "цель доступности", en: "availability target" },
+      tags: ["Oracle", "PostgreSQL", "Backup"]
+    }
+  ],
+
   experience: [
     {
       org: {

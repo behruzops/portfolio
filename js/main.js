@@ -145,6 +145,101 @@ window.App = (function () {
     host.innerHTML = svg;
   }
 
+  /* ---- moving capability rail ---- */
+  function renderCapabilityRail() {
+    const tracks = [$("#rail-track-a"), $("#rail-track-b")];
+    if (!tracks[0] || !tracks[1]) return;
+    const services = CONTENT.services || [];
+    const groups = [services.filter((_, i) => i % 2 === 0), services.filter((_, i) => i % 2 === 1)];
+    tracks.forEach((track, row) => {
+      track.innerHTML = "";
+      [...groups[row], ...groups[row]].forEach((service, index) => {
+        const chip = document.createElement("span");
+        chip.className = "rail-chip";
+        chip.setAttribute("aria-hidden", index >= groups[row].length ? "true" : "false");
+        const dot = document.createElement("span");
+        dot.className = "rail-chip-dot";
+        const label = document.createElement("span");
+        label.textContent = service.title[lang];
+        chip.append(dot, label);
+        track.appendChild(chip);
+      });
+    });
+  }
+
+  /* ---- rotating solution spotlight ---- */
+  let showcaseIndex = 0;
+  let showcaseTimer;
+  function renderShowcase() {
+    const tabs = $("#showcase-tabs");
+    const stage = $("#showcase-stage");
+    const items = CONTENT.showcase || [];
+    if (!tabs || !stage || !items.length) return;
+    clearInterval(showcaseTimer);
+    showcaseIndex = Math.min(showcaseIndex, items.length - 1);
+    tabs.innerHTML = "";
+
+    const activate = (next) => {
+      showcaseIndex = (next + items.length) % items.length;
+      const item = items[showcaseIndex];
+      tabs.querySelectorAll(".showcase-tab").forEach((button, i) => {
+        const active = i === showcaseIndex;
+        button.classList.toggle("active", active);
+        button.setAttribute("aria-selected", String(active));
+      });
+
+      stage.classList.remove("showcase-stage--ready");
+      stage.innerHTML = "";
+      const content = document.createElement("div");
+      content.className = "showcase-copy";
+      const eyebrow = document.createElement("span");
+      eyebrow.className = "showcase-eyebrow";
+      eyebrow.textContent = item.label[lang];
+      const title = document.createElement("h3");
+      title.textContent = item.title[lang];
+      const desc = document.createElement("p");
+      desc.textContent = item.desc[lang];
+      const tags = document.createElement("div");
+      tags.className = "showcase-tags";
+      item.tags.forEach((tag) => { const el = document.createElement("span"); el.textContent = tag; tags.appendChild(el); });
+      const link = document.createElement("a");
+      link.className = "showcase-link";
+      link.href = item.href;
+      link.textContent = I18N[lang].showcase_open + "  →";
+      content.append(eyebrow, title, desc, tags, link);
+
+      const visual = document.createElement("div");
+      visual.className = `showcase-visual showcase-visual--${item.kind}`;
+      visual.setAttribute("aria-hidden", "true");
+      visual.innerHTML = `<div class="visual-grid"></div><div class="visual-orbit visual-orbit--one"></div><div class="visual-orbit visual-orbit--two"></div><div class="visual-core"><span></span></div><div class="visual-signal visual-signal--a"></div><div class="visual-signal visual-signal--b"></div>`;
+      const metric = document.createElement("div");
+      metric.className = "showcase-metric";
+      metric.innerHTML = `<strong>${item.metric}</strong><span>${item.metricLabel[lang]}</span>`;
+      visual.appendChild(metric);
+      stage.append(content, visual);
+      requestAnimationFrame(() => stage.classList.add("showcase-stage--ready"));
+    };
+
+    items.forEach((item, i) => {
+      const button = document.createElement("button");
+      button.className = "showcase-tab";
+      button.type = "button";
+      button.role = "tab";
+      button.innerHTML = `<span class="showcase-tab-num">${String(i + 1).padStart(2, "0")}</span><span>${item.label[lang]}</span><i></i>`;
+      button.addEventListener("click", () => { activate(i); restartShowcase(); });
+      tabs.appendChild(button);
+    });
+
+    function restartShowcase() {
+      clearInterval(showcaseTimer);
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        showcaseTimer = setInterval(() => activate(showcaseIndex + 1), 5200);
+      }
+    }
+    activate(showcaseIndex);
+    restartShowcase();
+  }
+
   /* ---- timeline ---- */
   function renderTimeline() {
     const tl = $("#timeline");
@@ -204,6 +299,42 @@ window.App = (function () {
   }
 
   /* ---- services & pricing ---- */
+  function makeServiceIcon(service, card) {
+    const tile = document.createElement("span");
+    const motion = service.icon || "default";
+    tile.className = `price-ic price-ic--${motion}`;
+
+    if (motion === "hikvision") {
+      tile.classList.add("price-ic--camera");
+      tile.innerHTML = `<span class="camera-rig"><span class="camera-head"><span class="camera-lens"></span><span class="camera-glint"></span></span><span class="camera-arm"></span></span>`;
+      card.addEventListener("pointermove", (event) => {
+        const box = card.getBoundingClientRect();
+        const ratio = (event.clientX - box.left) / box.width;
+        const angle = Math.max(-28, Math.min(28, (ratio - 0.5) * 56));
+        card.style.setProperty("--camera-aim", `${angle}deg`);
+      });
+      card.addEventListener("pointerleave", () => card.style.removeProperty("--camera-aim"));
+      return tile;
+    }
+
+    const img = document.createElement("img");
+    img.src = `https://cdn.simpleicons.org/${motion}`;
+    img.alt = "";
+    img.loading = "lazy";
+    img.onerror = () => {
+      tile.classList.add("skill-ic--mono");
+      tile.textContent = (service.title[lang] || "?").charAt(0);
+      img.remove();
+    };
+    tile.appendChild(img);
+    if (["qrcode", "grafana", "prometheus", "uptimekuma"].includes(motion)) {
+      const fx = document.createElement("span");
+      fx.className = "price-ic-fx";
+      tile.appendChild(fx);
+    }
+    return tile;
+  }
+
   function renderServices() {
     const wrap = $("#pricing-grid");
     if (!wrap) return;
@@ -214,15 +345,7 @@ window.App = (function () {
 
       const head = document.createElement("div");
       head.className = "price-head";
-      const tile = document.createElement("span");
-      tile.className = "price-ic";
-      if (s.icon) {
-        const img = document.createElement("img");
-        img.src = `https://cdn.simpleicons.org/${s.icon}`;
-        img.alt = ""; img.loading = "lazy";
-        img.onerror = () => { tile.classList.add("skill-ic--mono"); tile.textContent = (s.title[lang] || "?").charAt(0); img.remove(); };
-        tile.appendChild(img);
-      }
+      const tile = makeServiceIcon(s, card);
       const h = document.createElement("h3");
       h.className = "price-title";
       h.textContent = s.title[lang];
@@ -252,6 +375,7 @@ window.App = (function () {
         price.append(amount);
       }
 
+      card.style.setProperty("--service-index", String(wrap.children.length));
       card.append(head, p, tags, price);
       wrap.appendChild(card);
     });
@@ -446,6 +570,8 @@ window.App = (function () {
   function renderAll() {
     applyStatic();
     renderNote();
+    renderCapabilityRail();
+    renderShowcase();
     renderStats();
     renderTimeline();
     renderSkills();
@@ -478,9 +604,23 @@ window.App = (function () {
     onScroll();
   }
 
+  function initAmbientPointer() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let frame = 0;
+    document.addEventListener("pointermove", (event) => {
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        document.documentElement.style.setProperty("--pointer-x", `${event.clientX}px`);
+        document.documentElement.style.setProperty("--pointer-y", `${event.clientY}px`);
+        frame = 0;
+      });
+    }, { passive: true });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     $("#year").textContent = new Date().getFullYear();
     initNav();
+    initAmbientPointer();
     setLang(lang);
   });
 
