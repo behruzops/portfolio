@@ -13,6 +13,7 @@ window.I18N = {
 
     hero_badge: "Monitoring muhandisi",
     hero_role: "Linux · Oracle Database · Monitoring · Avtomatlashtirish",
+    hero_alias: "Behruz Shuxratov · DevOps / DBA / Monitoring Engineer",
     hero_sub: "Monitoring tizimlarini quraman, Oracle bazalarga xizmat ko'rsataman va infratuzilmani avtomatlashtiraman.",
     hero_contact_btn: "Bog'lanish",
     hero_projects_btn: "Loyihalarim",
@@ -52,6 +53,18 @@ window.I18N = {
     svc_note: "Narxlar taxminiy va kelishiladi. Bepul maslahat uchun bemalol yozing.",
     svc_cta: "Buyurtma / maslahat",
 
+    process_kicker: "Hamkorlik jarayoni",
+    process_title: "G'oyadan ishlaydigan tizimgacha",
+    process_sub: "Har bir loyiha aniq bosqichlar, ochiq aloqa va topshirilgandan keyingi yordam bilan bajariladi.",
+    process_1_title: "Bepul maslahat",
+    process_1_desc: "Muammo, maqsad va kerakli natijani birga aniqlaymiz.",
+    process_2_title: "Reja va demo",
+    process_2_desc: "Yechim arxitekturasi, muddat va aniq narxni kelishamiz.",
+    process_3_title: "Ishlab chiqish",
+    process_3_desc: "Tizimni bosqichma-bosqich qurib, natijani ko'rsatib boraman.",
+    process_4_title: "Ishga tushirish va support",
+    process_4_desc: "O'rnatish, o'qitish va kelishilgan texnik yordamni taqdim qilaman.",
+
     systems_kicker: "07 — Loyihalar",
     systems_title: "Loyihalarim",
     systems_sub: "Tayyor va ishlaydigan loyihalardan namunalar.",
@@ -75,6 +88,7 @@ window.I18N = {
 
     contact_title: "Bog'lanish",
     contact_sub: "Hamkorlik yoki savollar uchun bemalol yozing.",
+    quick_contact: "Loyihani muhokama qilish",
     footer_made: "Orion yulduz turkumi ilhomida"
   },
 
@@ -90,6 +104,7 @@ window.I18N = {
 
     hero_badge: "Инженер по мониторингу",
     hero_role: "Linux · Oracle Database · Мониторинг · Автоматизация",
+    hero_alias: "Behruz Shuxratov · DevOps / DBA / Monitoring Engineer",
     hero_sub: "Строю системы мониторинга, обслуживаю базы Oracle и автоматизирую инфраструктуру.",
     hero_contact_btn: "Связаться",
     hero_projects_btn: "Мои проекты",
@@ -129,6 +144,18 @@ window.I18N = {
     svc_note: "Цены ориентировочные и обсуждаются. Пишите за бесплатной консультацией.",
     svc_cta: "Заказать / консультация",
 
+    process_kicker: "Процесс работы",
+    process_title: "От идеи до работающей системы",
+    process_sub: "Каждый проект выполняется по понятным этапам, с открытой коммуникацией и поддержкой после запуска.",
+    process_1_title: "Бесплатная консультация",
+    process_1_desc: "Вместе определяем проблему, цель и ожидаемый результат.",
+    process_2_title: "План и демо",
+    process_2_desc: "Согласовываем архитектуру решения, сроки и точную стоимость.",
+    process_3_title: "Разработка",
+    process_3_desc: "Создаю систему поэтапно и регулярно показываю результат.",
+    process_4_title: "Запуск и поддержка",
+    process_4_desc: "Устанавливаю систему, обучаю работе и обеспечиваю согласованную поддержку.",
+
     systems_kicker: "07 — Проекты",
     systems_title: "Мои проекты",
     systems_sub: "Примеры готовых, работающих проектов.",
@@ -152,6 +179,7 @@ window.I18N = {
 
     contact_title: "Связаться",
     contact_sub: "Пишите по вопросам сотрудничества или с любыми вопросами.",
+    quick_contact: "Обсудить проект",
     footer_made: "Вдохновлено созвездием Ориона"
   },
 
@@ -167,6 +195,7 @@ window.I18N = {
 
     hero_badge: "Monitoring Engineer",
     hero_role: "Linux · Oracle Database · Monitoring · Automation",
+    hero_alias: "Behruz Shuxratov · DevOps / DBA / Monitoring Engineer",
     hero_sub: "I build monitoring systems, maintain Oracle databases and automate infrastructure.",
     hero_contact_btn: "Get in touch",
     hero_projects_btn: "My projects",
@@ -206,6 +235,18 @@ window.I18N = {
     svc_note: "Prices are indicative and negotiable. Reach out for a free consultation.",
     svc_cta: "Order / consult",
 
+    process_kicker: "Working process",
+    process_title: "From idea to a working system",
+    process_sub: "Every project follows clear stages, transparent communication and post-launch support.",
+    process_1_title: "Free consultation",
+    process_1_desc: "We define the problem, goal and expected outcome together.",
+    process_2_title: "Plan and demo",
+    process_2_desc: "We agree on solution architecture, timeline and final quote.",
+    process_3_title: "Development",
+    process_3_desc: "I build in clear stages and regularly demonstrate progress.",
+    process_4_title: "Launch and support",
+    process_4_desc: "I deploy the system, train your team and provide agreed technical support.",
+
     systems_kicker: "07 — Projects",
     systems_title: "My projects",
     systems_sub: "Samples of finished, working products.",
@@ -229,6 +270,7 @@ window.I18N = {
 
     contact_title: "Get in touch",
     contact_sub: "Feel free to reach out for collaboration or any questions.",
+    quick_contact: "Discuss a project",
     footer_made: "Inspired by the Orion constellation"
   }
 };
