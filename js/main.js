@@ -362,18 +362,9 @@ window.App = (function () {
       const price = document.createElement("div");
       price.className = "price-value";
       const amount = document.createElement("span");
-      amount.className = "price-amount";
-      if (typeof s.price === "string") {
-        const from = document.createElement("span");
-        from.className = "price-from";
-        from.textContent = I18N[lang].svc_from;
-        amount.textContent = s.price;
-        price.append(from, amount);
-      } else {
-        amount.classList.add("price-amount--custom");
-        amount.textContent = s.price[lang];
-        price.append(amount);
-      }
+      amount.className = "price-amount price-amount--custom";
+      amount.textContent = I18N[lang].svc_agreement;
+      price.append(amount);
 
       const detailRoutes = {
         telegram: "telegram-bot/",

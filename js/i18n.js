@@ -47,10 +47,11 @@ window.I18N = {
     can_sub: "Quyida amalda qila oladigan ishlarimdan namunalar.",
 
     svc_kicker: "06 — Xizmatlar",
-    svc_title: "Xizmatlar va narxlar",
-    svc_sub: "Buyurtma asosida quyidagi ishlarni bajaraman. Narxlar boshlang'ich — aniq narx loyiha hajmiga qarab kelishiladi.",
+    svc_title: "Xizmatlar va hamkorlik",
+    svc_sub: "Buyurtma asosida quyidagi ishlarni bajaraman. Xizmat qiymati loyiha hajmi va talablariga ko'ra kelishiladi.",
     svc_from: "dan boshlab",
-    svc_note: "Narxlar taxminiy va kelishiladi. Bepul maslahat uchun bemalol yozing.",
+    svc_agreement: "Kelishuv asosida",
+    svc_note: "Barcha xizmatlar qiymati loyiha hajmi va talablariga ko'ra kelishuv asosida belgilanadi. Bepul maslahat uchun bemalol yozing.",
     svc_cta: "Buyurtma / maslahat",
     svc_details: "Batafsil ko'rish",
 
@@ -60,7 +61,7 @@ window.I18N = {
     process_1_title: "Bepul maslahat",
     process_1_desc: "Muammo, maqsad va kerakli natijani birga aniqlaymiz.",
     process_2_title: "Reja va demo",
-    process_2_desc: "Yechim arxitekturasi, muddat va aniq narxni kelishamiz.",
+    process_2_desc: "Yechim arxitekturasi, muddat va loyiha qiymatini kelishamiz.",
     process_3_title: "Ishlab chiqish",
     process_3_desc: "Tizimni bosqichma-bosqich qurib, natijani ko'rsatib boraman.",
     process_4_title: "Ishga tushirish va support",
@@ -139,10 +140,11 @@ window.I18N = {
     can_sub: "Ниже — примеры того, что я делаю на практике.",
 
     svc_kicker: "06 — Услуги",
-    svc_title: "Услуги и цены",
-    svc_sub: "Выполняю следующие работы на заказ. Цены стартовые — точная стоимость обсуждается исходя из объёма проекта.",
+    svc_title: "Услуги и сотрудничество",
+    svc_sub: "Выполняю следующие работы на заказ. Стоимость определяется по договорённости с учётом объёма и требований проекта.",
     svc_from: "от",
-    svc_note: "Цены ориентировочные и обсуждаются. Пишите за бесплатной консультацией.",
+    svc_agreement: "По договорённости",
+    svc_note: "Стоимость всех услуг определяется по договорённости с учётом объёма и требований проекта. Пишите за бесплатной консультацией.",
     svc_cta: "Заказать / консультация",
     svc_details: "Подробнее",
 
@@ -152,7 +154,7 @@ window.I18N = {
     process_1_title: "Бесплатная консультация",
     process_1_desc: "Вместе определяем проблему, цель и ожидаемый результат.",
     process_2_title: "План и демо",
-    process_2_desc: "Согласовываем архитектуру решения, сроки и точную стоимость.",
+    process_2_desc: "Согласовываем архитектуру решения, сроки и стоимость проекта.",
     process_3_title: "Разработка",
     process_3_desc: "Создаю систему поэтапно и регулярно показываю результат.",
     process_4_title: "Запуск и поддержка",
@@ -231,10 +233,11 @@ window.I18N = {
     can_sub: "Below are samples of what I do in practice.",
 
     svc_kicker: "06 — Services",
-    svc_title: "Services & pricing",
-    svc_sub: "I take on the following work on a freelance basis. Prices are starting points — the final quote depends on project scope.",
+    svc_title: "Services & collaboration",
+    svc_sub: "I take on the following work on a freelance basis. Cost is agreed based on project scope and requirements.",
     svc_from: "from",
-    svc_note: "Prices are indicative and negotiable. Reach out for a free consultation.",
+    svc_agreement: "By agreement",
+    svc_note: "The cost of every service is agreed based on project scope and requirements. Reach out for a free consultation.",
     svc_cta: "Order / consult",
     svc_details: "View details",
 
@@ -244,7 +247,7 @@ window.I18N = {
     process_1_title: "Free consultation",
     process_1_desc: "We define the problem, goal and expected outcome together.",
     process_2_title: "Plan and demo",
-    process_2_desc: "We agree on solution architecture, timeline and final quote.",
+    process_2_desc: "We agree on solution architecture, timeline and project cost.",
     process_3_title: "Development",
     process_3_desc: "I build in clear stages and regularly demonstrate progress.",
     process_4_title: "Launch and support",
@@ -529,7 +532,7 @@ window.CONTENT = {
 
   services: [
     {
-      icon: "html5", price: "$50",
+      icon: "html5",
       title: { uz: "Landing / portfolio sayt", ru: "Landing / портфолио сайт", en: "Landing / portfolio site" },
       desc: {
         uz: "Bir sahifali zamonaviy, mobilga moslashgan, tez ishlaydigan sayt. Dizayn, animatsiya va SEO asoslari bilan.",
@@ -539,7 +542,7 @@ window.CONTENT = {
       tags: ["HTML/CSS/JS", "Responsive", "SEO"]
     },
     {
-      icon: "react", price: "$200",
+      icon: "react",
       title: { uz: "Ko'p sahifali / korporativ sayt", ru: "Многостраничный / корпоративный сайт", en: "Multi-page / corporate site" },
       desc: {
         uz: "Bir nechta sahifa, admin panel, ko'p tillilik va kontent boshqaruvi bilan to'liq korporativ sayt.",
@@ -549,7 +552,7 @@ window.CONTENT = {
       tags: ["Multi-page", "Admin panel", "i18n"]
     },
     {
-      icon: "telegram", price: "$100",
+      icon: "telegram",
       title: { uz: "Telegram bot", ru: "Telegram-бот", en: "Telegram bot" },
       desc: {
         uz: "Avtomatlashtirish, xabarnoma, buyurtma yoki hisob-kitob botlari. Baza va admin panel bilan bog'lanadi.",
@@ -559,7 +562,7 @@ window.CONTENT = {
       tags: ["Node.js", "Bot API", "Automation"]
     },
     {
-      icon: "grafana", price: "$200",
+      icon: "grafana",
       title: { uz: "Monitoring dashboard", ru: "Дашборд мониторинга", en: "Monitoring dashboard" },
       desc: {
         uz: "Server, baza va xizmatlar holatini real vaqtda ko'rsatuvchi panel + Telegram alert. Grafana yoki maxsus yechim.",
@@ -569,7 +572,7 @@ window.CONTENT = {
       tags: ["Grafana", "Alerting", "Real-time"]
     },
     {
-      icon: "oracle", price: "$150",
+      icon: "oracle",
       title: { uz: "Oracle / PostgreSQL o'rnatish & sozlash", ru: "Установка и настройка Oracle / PostgreSQL", en: "Oracle / PostgreSQL setup & tuning" },
       desc: {
         uz: "Bazani noldan o'rnatish, xavfsiz sozlash, backup va foydalanuvchi/rol boshqaruvini yo'lga qo'yish.",
@@ -579,7 +582,7 @@ window.CONTENT = {
       tags: ["Oracle 19c", "PostgreSQL", "Linux"]
     },
     {
-      icon: "postgresql", price: "$200",
+      icon: "postgresql",
       title: { uz: "DB optimizatsiya & migratsiya", ru: "Оптимизация и миграция БД", en: "DB optimization & migration" },
       desc: {
         uz: "Sekin ishlayotgan so'rovlarni tezlashtirish, indekslash, ma'lumotni bir bazadan boshqasiga ko'chirish.",
@@ -589,7 +592,7 @@ window.CONTENT = {
       tags: ["SQL tuning", "Indexing", "Migration"]
     },
     {
-      icon: "docker", price: "$100",
+      icon: "docker",
       title: { uz: "Docker / DevOps deployment", ru: "Docker / DevOps деплой", en: "Docker / DevOps deployment" },
       desc: {
         uz: "Ilovani konteynerlash, serverga joylash, domen/HTTPS sozlash va avtomatik ishga tushirish.",
@@ -599,7 +602,7 @@ window.CONTENT = {
       tags: ["Docker", "Nginx", "CI/CD"]
     },
     {
-      icon: "flutter", price: "$299",
+      icon: "flutter",
       title: { uz: "Mobil ilova (Android)", ru: "Мобильное приложение (Android)", en: "Mobile app (Android)" },
       desc: {
         uz: "Flutter'da Android ilova — API, AI yoki baza bilan. Tayyor APK va do'konga chiqarishga yordam.",
@@ -609,7 +612,7 @@ window.CONTENT = {
       tags: ["Flutter", "Android", "APK"]
     },
     {
-      icon: "asterisk", price: "$299",
+      icon: "asterisk",
       title: { uz: "Call-markaz o'rnatish", ru: "Установка call-центра", en: "Call center setup" },
       desc: {
         uz: "Asterisk/VoIP asosida call-markaz — operatorlar, ichki raqamlar, qo'ng'iroqlarni yozib olish va statistika.",
@@ -619,7 +622,7 @@ window.CONTENT = {
       tags: ["Asterisk", "VoIP", "Telephony"]
     },
     {
-      icon: "openai", price: "$499",
+      icon: "openai",
       title: { uz: "AI call-markaz", ru: "AI call-центр", en: "AI call center" },
       desc: {
         uz: "Sun'iy intellektli call-markaz — AI operator qo'ng'iroqlarga javob beradi, ma'lumot yig'adi va yo'naltiradi. Doimiy qo'llab-quvvatlash bilan.",
@@ -629,17 +632,17 @@ window.CONTENT = {
       tags: ["AI", "Voice", "Automation"]
     },
     {
-      icon: "hikvision", price: { uz: "150 000 so'mdan", ru: "от 150 000 сум", en: "from 150,000 UZS" },
+      icon: "hikvision",
       title: { uz: "Videokuzatuv (kamera) o'rnatish", ru: "Установка видеонаблюдения", en: "CCTV camera installation" },
       desc: {
-        uz: "Videokuzatuv kameralarini o'rnatish va sozlash — har bir kamera nuqtasi uchun narx, masofadan ko'rish bilan.",
+        uz: "Videokuzatuv kameralarini o'rnatish va sozlash — har bir nuqta loyiha bo'yicha kelishiladi, masofadan ko'rish bilan.",
         ru: "Установка и настройка камер видеонаблюдения — цена за каждую точку, с удалённым доступом.",
         en: "CCTV camera installation and setup — priced per camera point, with remote viewing."
       },
       tags: ["CCTV", "Security", "Har nuqta"]
     },
     {
-      icon: "steam", price: { uz: "Kelishiladi", ru: "Договорная", en: "Custom quote" },
+      icon: "steam",
       title: { uz: "Kompyuter klublar avtomatlashtirish", ru: "Автоматизация компьютерных клубов", en: "Gaming club automation" },
       desc: {
         uz: "Kompyuter klublar uchun server ko'tarish, o'yinlarni markazlashtirish va butun tizimni avtomatlashtirish.",
@@ -649,7 +652,7 @@ window.CONTENT = {
       tags: ["Server", "Gaming", "Automation"]
     },
     {
-      icon: "googlesheets", price: { uz: "Kelishiladi", ru: "Договорная", en: "Custom quote" },
+      icon: "googlesheets",
       title: { uz: "Buxgalterlar uchun moliyaviy tizimlar", ru: "Финансовые системы для бухгалтеров", en: "Financial systems for accountants" },
       desc: {
         uz: "Buxgalterlar uchun maxsus moliyaviy tizimlar — hisob-kitob, hisobotlar, avtomatlashtirish va integratsiyalar.",
@@ -659,7 +662,7 @@ window.CONTENT = {
       tags: ["Finance", "Accounting", "Automation"]
     },
     {
-      icon: "uptimekuma", price: { uz: "Kelishiladi", ru: "Договорная", en: "Custom quote" },
+      icon: "uptimekuma",
       title: { uz: "Oylik qo'llab-quvvatlash", ru: "Ежемесячная поддержка", en: "Monthly support" },
       desc: {
         uz: "Oylik texnik qo'llab-quvvatlash — tizimlaringizni kuzataman, muammo chiqsa tez ko'rib beraman, yangilanish va profilaktika. Hajmi o'zaro kelishiladi.",
@@ -669,7 +672,7 @@ window.CONTENT = {
       tags: ["Support", "SLA", "Maintenance"]
     },
     {
-      icon: "googlegemini", price: "$149",
+      icon: "googlegemini",
       title: { uz: "AI chatbot (bilim bazasi)", ru: "AI чат-бот (база знаний)", en: "AI chatbot (knowledge base)" },
       desc: {
         uz: "Sayt uchun AI chatbot — kompaniya hujjatlari va ma'lumotlaridan javob beradi (RAG).",
@@ -679,7 +682,7 @@ window.CONTENT = {
       tags: ["AI", "RAG", "Gemini"]
     },
     {
-      icon: "telegram", price: "$99",
+      icon: "telegram",
       title: { uz: "CRM + Telegram lead bot", ru: "CRM + Telegram lead-бот", en: "CRM + Telegram lead bot" },
       desc: {
         uz: "Mijozlar bazasi + so'rovlarni Telegram bot orqali yig'ish, holat va izohlar bilan boshqarish.",
@@ -689,7 +692,7 @@ window.CONTENT = {
       tags: ["CRM", "Telegram", "Leads"]
     },
     {
-      icon: "twilio", price: "$99",
+      icon: "twilio",
       title: { uz: "SMS / xabarnoma gateway", ru: "SMS / рассылка", en: "SMS / notification gateway" },
       desc: {
         uz: "Kontaktlar ro'yxatiga ommaviy SMS (Eskiz.uz) va Telegram xabarlar yuborish paneli.",
@@ -699,7 +702,7 @@ window.CONTENT = {
       tags: ["SMS", "Telegram", "Broadcast"]
     },
     {
-      icon: "qrcode", price: "$99",
+      icon: "qrcode",
       title: { uz: "QR-menyu + buyurtma", ru: "QR-меню + заказы", en: "QR menu + ordering" },
       desc: {
         uz: "Stolga QR → mijoz menyuni ko'radi va buyurtma beradi → oshxona ekraniga real vaqtda tushadi.",
@@ -709,7 +712,7 @@ window.CONTENT = {
       tags: ["QR", "Restoran", "Real-time"]
     },
     {
-      icon: "square", price: "$250",
+      icon: "square",
       title: { uz: "Do'kon / ombor + kassa (POS)", ru: "Магазин / склад + касса (POS)", en: "Shop / inventory + POS" },
       desc: {
         uz: "Tovar, barcode, sotuv, qoldiq va hisobotlar — kassa (POS) va ombor bir tizimda.",
@@ -719,7 +722,7 @@ window.CONTENT = {
       tags: ["POS", "Inventory", "Barcode"]
     },
     {
-      icon: "googlecalendar", price: "$150",
+      icon: "googlecalendar",
       title: { uz: "Booking / rezervatsiya", ru: "Бронирование / запись", en: "Booking / reservations" },
       desc: {
         uz: "Xizmat + sana + bo'sh vaqt tanlash, band qilish va Telegram tasdiq. Salon, kort, shifokor uchun.",
@@ -729,7 +732,7 @@ window.CONTENT = {
       tags: ["Booking", "Slots", "Telegram"]
     },
     {
-      icon: "queue", price: "$150",
+      icon: "queue",
       title: { uz: "Onlayn navbat (queue)", ru: "Электронная очередь", en: "Online queue" },
       desc: {
         uz: "Raqam olish + katta ekranda chaqiruv + operator paneli. Klinika, bank, MFY uchun.",
@@ -739,7 +742,7 @@ window.CONTENT = {
       tags: ["Queue", "Display", "Operator"]
     },
     {
-      icon: "fitbit", price: "$199",
+      icon: "fitbit",
       title: { uz: "Fitnes zal a'zolik tizimi", ru: "Система абонементов фитнес-зала", en: "Gym membership system" },
       desc: {
         uz: "A'zolar, karta/obuna, kirish nazorati (check-in), obuna muddati va tugash ogohlantirishlari.",
@@ -749,7 +752,7 @@ window.CONTENT = {
       tags: ["Membership", "Check-in", "Cards"]
     },
     {
-      icon: "prometheus", price: "$149",
+      icon: "prometheus",
       title: { uz: "Server monitoring + Telegram alert", ru: "Мониторинг серверов + Telegram-алерты", en: "Server monitoring + Telegram alerts" },
       desc: {
         uz: "Prometheus + Grafana + Alertmanager — CPU/RAM/disk kuzatuvi va Telegram ogohlantirish, bir buyruq bilan.",
@@ -759,7 +762,7 @@ window.CONTENT = {
       tags: ["Prometheus", "Grafana", "Alerting"]
     },
     {
-      icon: "rclone", price: "$150",
+      icon: "rclone",
       title: { uz: "Backup avtomatlashtirish", ru: "Автоматизация бэкапов", en: "Backup automation" },
       desc: {
         uz: "Baza va fayllarni avtomatik zaxiralash → cloud'ga yuklash → Telegram xabar, cron bilan jadval.",
@@ -769,7 +772,7 @@ window.CONTENT = {
       tags: ["Backup", "Cron", "Cloud"]
     },
     {
-      icon: "uptimekuma", price: "$99",
+      icon: "uptimekuma",
       title: { uz: "Uptime status sahifasi", ru: "Страница статуса (uptime)", en: "Uptime status page" },
       desc: {
         uz: "Servislaringiz ishlayaptimi — ochiq status sahifasi, uptime foizi va insidentlar tarixi bilan.",
