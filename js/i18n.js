@@ -443,7 +443,8 @@ window.CONTENT = {
         { name: "Oracle Database", slug: "oracle" },
         { name: "Oracle 19c", slug: "oracle" },
         { name: "SQL", slug: null },
-        { name: "PostgreSQL", slug: "postgresql" }
+        { name: "PostgreSQL", slug: "postgresql" },
+        { name: "MongoDB", slug: "mongodb" }
       ]
     },
     {
