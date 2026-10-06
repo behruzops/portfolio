@@ -942,6 +942,20 @@ window.CONTENT = {
 
   certificates: [
     {
+      title: "Introduction to Oracle Cloud Essentials",
+      issuer: "Oracle · Coursera",
+      date: "06.10.2026",
+      img: "assets/cert-oracle-cloud-coursera.png",
+      file: "https://coursera.org/verify/Y4H6D44QASZ4"
+    },
+    {
+      title: "Introduction to MongoDB",
+      issuer: "MongoDB · Coursera",
+      date: "02.10.2026",
+      img: "assets/cert-mongodb-coursera.jpg",
+      file: "https://coursera.org/verify/IQIPLZFJSUJI"
+    },
+    {
       title: "DevOps",
       issuer: "Uacademy",
       date: "30.10.2024",
